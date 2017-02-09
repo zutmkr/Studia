@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1473284242 source:c:\users\akomary\desktop\c++\codeblocks\chess\main.cpp
+	<stdio.h>
+	<tchar.h>
+	<iostream>
+	<Windows.h>
+	<stdlib.h>
+	<time.h>
+

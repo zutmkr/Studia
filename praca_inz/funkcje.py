@@ -10,8 +10,11 @@ import uczestnicy
 import podziemia
 import rysuj_obrazy
 
+
 prawda_falsz = [True, False]
 status = ''
+
+
 
 
 def sciana():
@@ -20,8 +23,14 @@ def sciana():
 
 
 def event(gr, maps):
-    if random.choice(prawda_falsz):
+    barter = uczestnicy.Handlarz()
+
+    p = random.randint(0,3)
+    #p = 1
+    if p == 0:    
         uczestnicy.Uzdrowiciel(gr)
+    elif p == 1:
+        barter.handel(gr)
     else:
         rozpocznij_walke(gr)
 

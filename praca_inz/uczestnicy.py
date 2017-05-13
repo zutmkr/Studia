@@ -10,12 +10,15 @@ import pokoj
 import funkcje
 
 prawda_falsz = [True, False]
+
+
         
 
 class Gracz:
     lista = []  # lista przedmiotow
     pozycja = []
     punkty = 0
+    zloto = 0
 
     # atrybuty postaci
     s = 10  # sila
@@ -86,3 +89,119 @@ class Uzdrowiciel(Gracz):
         print('Otrzymujesz +3 Punkty Zycia')
         gr.pz += 3
         getch()
+
+        
+class Handlarz(Gracz):
+
+    lista = []
+    zloto = 500
+    
+    def rysuj_handel(self,gr):
+            os.system('cls')  # czyszczenie ekranu
+            rysuj_obrazy.rysuj_potwora('static/handl.txt')
+            print('\t\tSpotykasz Handlarza!!!\n')
+            print('>W czym moge pomoc?\n\t\t\t Handlarz posiada ', self.zloto, ' sztuk zlota\n')
+            print('\t1) Pokaz mi swoje towary. (kupuj)')
+            print('\t2) Zobacz co mam. (sprzedawaj)')
+            print('\t0) Zegnam.\t\t Twoje zloto: ',gr.zloto)
+    
+    def handel(self,gr):
+        wyb = '9'
+        
+        self.dodaj_do_plecak()
+        self.dodaj_do_plecak()
+        self.dodaj_do_plecak()
+            
+        while wyb != '0':
+
+            self.rysuj_handel(gr)
+            wyb = input('\nTwoj wybor: ')
+            s = 0
+            
+            if wyb == '1':
+                if not self.lista:
+                    print('(Handlarz): Nie mam przy sobie zadnych towarow...')
+                    getch()
+                inp = ''
+                while inp != '8':
+                    if not self.lista:
+                        break
+
+                    for Przedmiot in self.lista:
+                        Przedmiot.nazwa = Przedmiot.nazwa.lstrip()
+                        Przedmiot.nazwa = Przedmiot.nazwa.lstrip('-> ')
+                    
+                    for Przedmiot in self.lista:
+                        Przedmiot.nazwa = '   ' + Przedmiot.nazwa
+                    
+                    self.lista[s].nazwa = self.lista[s].nazwa.lstrip()
+                    self.lista[s].nazwa = '-> ' + self.lista[s].nazwa
+                    
+                    os.system('cls')  # czyszczenie ekranu
+                    print('Wybierz co Cie interesuje:')
+                    print('\t\t\t\t\t\tINSTRUKCJE')
+                    print('\t\t\t\t\t\t\tw - strzalka w gore')
+                    print('\t\t\t\t\t\t\ts - strzalka w dol')
+                    print('\t\t\t\t\t\t\tk - kup przedmiot')
+                    print('\t\t\t\t\t\t\t8 - wroc do rozmowy z handlarzem')
+                    print('\t\tTwoje zloto:', gr.zloto, ' zlota\n')
+                    for Przedmiot in self.lista:
+                        print('\t',Przedmiot.nazwa,'\t(', Przedmiot.wartosc, ' zlota)')
+                        
+                    inp = getch().decode("utf-8")
+                    if inp == 'w':
+                        s-=1
+                        try:
+                            if s < 0 : 
+                                s = 0
+                                self.lista[s+1].nazwa = self.lista[s+1].nazwa.lstrip()
+                                self.lista[s+1].nazwa = self.lista[s+1].nazwa.lstrip('-> ')
+                                self.lista[s+1].nazwa = '   ' + self.lista[s+1].nazwa
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip()
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip('-> ')
+                                self.lista[s].nazwa = '-> ' + self.lista[s].nazwa
+                            else:
+                                self.lista[s+1].nazwa = self.lista[s+1].nazwa.lstrip()
+                                self.lista[s+1].nazwa = self.lista[s+1].nazwa.lstrip('-> ')
+                                self.lista[s+1].nazwa = '   ' + self.lista[s+1].nazwa
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip()
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip('-> ')
+                                self.lista[s].nazwa = '-> ' + self.lista[s].nazwa
+                        except:
+                            pass
+                    elif inp == 's':
+                        s+=1
+                        try:
+                            if s > len(self.lista)-1:
+                                s = len(self.lista)-1
+                                self.lista[s-1].nazwa = self.lista[s-1].nazwa.lstrip()
+                                self.lista[s-1].nazwa = self.lista[s-1].nazwa.lstrip('-> ')
+                                self.lista[s-1].nazwa = '   ' + self.lista[s-1].nazwa
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip()
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip('-> ')
+                                self.lista[s].nazwa = '-> ' + self.lista[s].nazwa
+                            else:  
+                                self.lista[s-1].nazwa = self.lista[s-1].nazwa.lstrip()
+                                self.lista[s-1].nazwa = self.lista[s-1].nazwa.lstrip('-> ')
+                                self.lista[s-1].nazwa = '   ' + self.lista[s-1].nazwa
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip()
+                                self.lista[s].nazwa = self.lista[s].nazwa.lstrip('-> ')
+                                self.lista[s].nazwa = '-> ' + self.lista[s].nazwa
+                        except:
+                            pass
+                    elif inp == 'k':
+                        for Przedmiot in self.lista:
+                            if not Przedmiot.nazwa.find('-> '):
+                                Przedmiot.nazwa = Przedmiot.nazwa.lstrip('-> ')
+                                gr.lista.append(Przedmiot)
+                                self.lista.remove(Przedmiot)
+                                s = 0
+                                
+            elif wyb == '2':
+                gr.pokaz_plecak()
+                getch()
+            
+        
+        
+        
+        

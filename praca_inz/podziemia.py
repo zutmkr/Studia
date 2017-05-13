@@ -5,7 +5,7 @@ import os
 import rysuj_obrazy
 import pokoj
 import funkcje
-import kolory
+
 
 # rodzaj_mapy = [[0,0,0], [0,0,0,0,0], [0,0,0,0,0,0,0]]
 rodzaj_mapy = [[0, 0, 0, 0, 0, 0, 0]]

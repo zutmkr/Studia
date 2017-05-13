@@ -10,6 +10,19 @@
                                  
                                  
                                  
+                                 
+(Alpha v0.011):IN WORKS
+    + główne menu gry
+    + tłumaczenia (Pl,En,De)
+    + nowe logo
+    + opcja save game
+    + 
+    - ...
+    
+(Alpha v0.010c):
+    - dodano mozliwosc kupowania przedmiotow od handlarza oraz plynny wybor przedmiotów z listy
+    - dodano mozliwosc spotkania handlarza i podstawowa interakcje z nim
+    
 (Alpha v0.010b):
     - dodano mozliwosc zaczecia nowej gry po ekranie 'game over'
     - gracz otrzymuje juz tylko jeden przedmiot per pokoj 

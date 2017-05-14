@@ -111,13 +111,13 @@ class Mapa():
                             print('8', end='')
 
         print('\t\t\t\t\t\tINSTRUKCJE')
-        print('\t\t\t\t\t\t\t8 - GRACZ\t\tw - ruch w gore')
-        print('\t\t\t\t\t\t\t_ - OTWARTY POKOJ\ts - ruch w dol')
-        print('\t\t\t\t\t\t\t# - ZAMKNIETY POKOJ\ta - ruch w lewo')
-        print('\t\t\t\t\t\t\tX - ZEJSCIE\t\td - ruch w prawo')
-        print('\t\t\t\t\t\t\t$ - HANDLARZ\t\tc - pokaz karte postaci')
-        print('\t\t\t\t\t\t\t@ - KOWAL\t\ti - pokaz plecak')
-        print('\n\t\t\t\t\t\t\t\t\t\t` - wyjscie z gry')
+        print('\t\t\t\t\t\t\t8 - GRACZ\t\tw - ruch w górę')
+        print('\t\t\t\t\t\t\t_ - OTWARTY POKÓJ\ts - ruch w dół')
+        print('\t\t\t\t\t\t\t# - ZAMKNIĘTY POKÓJ\ta - ruch w lewo')
+        print('\t\t\t\t\t\t\tX - ZEJŚCIE\t\td - ruch w prawo')
+        print('\t\t\t\t\t\t\t$ - HANDLARZ\t\tc - pokaż kartę postaci')
+        print('\t\t\t\t\t\t\t@ - KOWAL\t\ti - pokaż plecak')
+        print('\n\t\t\t\t\t\t\t\t\t\t` - wyjście z gry (zapisuje grę)')
 
     def stworz_nowa_mape(self,gr):
         if gr.pozycja[0] == len(self.mapa) - 1 and gr.pozycja[1] == len(self.mapa) - 1:

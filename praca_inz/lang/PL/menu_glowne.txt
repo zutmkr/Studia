@@ -1,0 +1,23 @@
+        MENU G£”WNE
+        -> NOWA GRA
+           KONTYNUUJ
+           EXTRA    (jeszcze nie opr.)
+           WYJDè Z GRY
+           
+        MENU G£”WNE
+           NOWA GRA
+        -> KONTYNUUJ
+           EXTRA    (jeszcze nie opr.)
+           WYJDè Z GRY
+
+        MENU G£”WNE
+           NOWA GRA
+           KONTYNUUJ
+        -> EXTRA    (jeszcze nie opr.)
+           WYJDè Z GRY
+
+        MENU G£”WNE
+           NOWA GRA
+           KONTYNUUJ
+           EXTRA    (jeszcze nie opr.)
+        -> WYJDè Z GRY           

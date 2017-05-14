@@ -1,10 +1,10 @@
 import random
 import podziemia
 
-stuff = ['miecz', 'zbroja', 'potion', 'buty', 'kusza', 'tiara', 'pierscien', 'amulet', 'tarcza', 'pas', 'rekawice',
+stuff = ['miecz', 'zbroja', 'potion', 'buty', 'kusza', 'tiara', 'pierścien', 'amulet', 'tarcza', 'pas', 'rękawice',
          'pet']
 dobry_prefix = ['dobre', 'magiczne', 'rzadkie', 'legendarne']
-zly_prefix = ['zwykle', 'zepsute', 'zardzewiale', 'przeklete']
+zly_prefix = ['zwykłe', 'zepsute', 'zardzewiałe', 'przeklęte']
 
 
 class Przedmiot:
@@ -36,13 +36,13 @@ class Smiec:
         p = random.choice(zly_prefix)
         y.nazwa = p + ' ' + y.nazwa
         
-        if p == 'zwykle':
+        if p == 'zwykłe':
             y.wartosc = y.wartosc * podziemia.poziom_p
         elif p == 'zepsute':
             y.wartosc = (y.wartosc * 0.75) * podziemia.poziom_p
-        elif p == 'zardzewiale':
+        elif p == 'zardzewiałe':
             y.wartosc = (y.wartosc * 0.5) * podziemia.poziom_p
-        elif p == 'przeklete':
+        elif p == 'przeklęte':
             y.wartosc = (y.wartosc * 0.25) * podziemia.poziom_p
         
         return y

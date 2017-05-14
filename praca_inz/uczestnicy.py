@@ -21,12 +21,12 @@ class Gracz:
     zloto = 0
 
     # atrybuty postaci
-    s = 10  # sila
+    s = 15  # sila
     pz = 39  # punkty zycia
 
     def pokaz_staty(self):
-        print('Sila postaci: ', self.s)
-        print('Pozostale punkty zycia: ', self.pz)
+        print('Siła postaci: ', self.s)
+        print('Pozostałe punkty życia: ', self.pz)
 
     def pokaz_plecak(self):
         for Przedmiot in self.lista:
@@ -55,7 +55,7 @@ class Gracz:
             funkcje.status = ''
             if not self.lista[-1].nazwa.find('legendarne'):
                 winsound.PlaySound('sound/legenda.wav', winsound.SND_ASYNC)
-                funkcje.status = 'Zdobyles LEGENDARNY przedmiot, otrzymujesz +5 do sily!!!'
+                funkcje.status = 'Zdobyłeś LEGENDARNY przedmiot, otrzymujesz +5 do SIŁY!!!'
                 self.s += 5
         else:
             self.lista.append(przedmiot.Smiec().dodaj_przedmiot())
@@ -73,11 +73,11 @@ class Potwor(Gracz):
     def walka_gui(self, status, gr):
         os.system('cls')
         rysuj_obrazy.rysuj_potwora('static/' + self.imie + '.txt')
-        print('Musisz walczyc z ', self.imie, ' ', self.pz, '/', self.pmax, 'PZ')
+        print('Musisz walczyć z ', self.imie, ' ', self.pz, '/', self.pmax, 'PŻ')
         print('\t\t\t\t\t\tDOZWOLONE AKCJE')
-        print('\t\t\t\t\t\t\tf - Atak bronia')
-        print('\t\t\t\t\t\t\tj - Ucieczka(20% szans)\n\n')
-        print('\t\t\t\t\t\t\tTwoje PZ: ', gr.pz)
+        print('\t\t\t\t\t\t\tf - Atak bronią')
+        print('\t\t\t\t\t\t\tj - Ucieczka(25% szans)\n\n')
+        print('\t\t\t\t\t\t\tTwoje PŻ: ', gr.pz)
         print('Status: ', status)
         
 
@@ -86,7 +86,7 @@ class Uzdrowiciel(Gracz):
         os.system('cls')  # czyszczenie ekranu
         rysuj_obrazy.rysuj_potwora('static/uzdr.txt')
         print('Spotykasz Uzdrowiciela!!!')
-        print('Otrzymujesz +3 Punkty Zycia')
+        print('Otrzymujesz +3 PUNKTY ŻYCIA')
         gr.pz += 3
         getch()
 
@@ -100,10 +100,10 @@ class Handlarz(Gracz):
             os.system('cls')  # czyszczenie ekranu
             rysuj_obrazy.rysuj_potwora('static/handl.txt')
             print('\t\tSpotykasz Handlarza!!!\n')
-            print('>W czym moge pomoc?\n\t\t\t Handlarz posiada ', self.zloto, ' sztuk zlota\n')
-            print('\t1) Pokaz mi swoje towary. (kupuj)')
+            print('>W czym mogę pomóc?\n\t\t\t Handlarz posiada ', self.zloto, ' sztuk złota\n')
+            print('\t1) Pokaż mi swoje towary. (kupuj)')
             print('\t2) Zobacz co mam. (sprzedawaj)')
-            print('\t0) Zegnam.\t\t Twoje zloto: ',gr.zloto)
+            print('\t0) Żegnam.\t\t Twoje złoto: ',gr.zloto)
     
     def handel(self,gr):
         wyb = '9'
@@ -115,12 +115,12 @@ class Handlarz(Gracz):
         while wyb != '0':
 
             self.rysuj_handel(gr)
-            wyb = input('\nTwoj wybor: ')
+            wyb = input('\nTwój wybór: ')
             s = 0
             
             if wyb == '1':
                 if not self.lista:
-                    print('(Handlarz): Nie mam przy sobie zadnych towarow...')
+                    print('(Handlarz): Nie mam przy sobie żadnych towarów...')
                     getch()
                 inp = ''
                 while inp != '8':
@@ -138,15 +138,15 @@ class Handlarz(Gracz):
                     self.lista[s].nazwa = '-> ' + self.lista[s].nazwa
                     
                     os.system('cls')  # czyszczenie ekranu
-                    print('Wybierz co Cie interesuje:')
+                    print('Wybierz co Cię interesuje:')
                     print('\t\t\t\t\t\tINSTRUKCJE')
-                    print('\t\t\t\t\t\t\tw - strzalka w gore')
-                    print('\t\t\t\t\t\t\ts - strzalka w dol')
+                    print('\t\t\t\t\t\t\tw - strzałka w górę')
+                    print('\t\t\t\t\t\t\ts - strzałka w dół')
                     print('\t\t\t\t\t\t\tk - kup przedmiot')
-                    print('\t\t\t\t\t\t\t8 - wroc do rozmowy z handlarzem')
-                    print('\t\tTwoje zloto:', gr.zloto, ' zlota\n')
+                    print('\t\t\t\t\t\t\t8 - wróć do rozmowy z handlarzem')
+                    print('\t\tTwoje zloto:', gr.zloto, ' złota\n')
                     for Przedmiot in self.lista:
-                        print('\t',Przedmiot.nazwa,'\t(', Przedmiot.wartosc, ' zlota)')
+                        print('\t',Przedmiot.nazwa,'\t(', Przedmiot.wartosc, ' złota)')
                         
                     inp = getch().decode("utf-8")
                     if inp == 'w':

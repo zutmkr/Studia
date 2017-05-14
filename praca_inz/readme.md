@@ -12,11 +12,13 @@
                                  
                                  
 (Alpha v0.011):IN WORKS
-    + główne menu gry
+    + główne menu gry                   - done
     + tłumaczenia (Pl,En,De)
     + nowe logo
-    + opcja save game
-    + 
+    + opcja save game                   - done
+    + obsługa kodowania polskich znaków - done
+    + zwiekszono obrazenia zadawane przez gracza do 15 na 1 poziomie
+    + zwiekszono szanse ucieczki do 25%
     - ...
     
 (Alpha v0.010c):

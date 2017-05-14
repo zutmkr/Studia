@@ -2,6 +2,7 @@ import random
 import winsound
 import os
 import sys
+import pickle
 from msvcrt import getch
 from time import sleep
 
@@ -13,14 +14,21 @@ import rysuj_obrazy
 
 prawda_falsz = [True, False]
 status = ''
-
+PIK = "save/objects.bj"
 
 
 
 def sciana():
     global status
-    status = 'Nie mozesz tam isc, to sciana.'
-
+    status = 'Nie możesz tam iść, to ściana.'
+    
+def zapisz_gre(gr,maps):
+    data = [gr,maps,podziemia.poziom_p,gr.lista]
+    
+    with open(PIK, "wb") as f:
+        pickle.dump(len(data), f)
+        for value in data:
+            pickle.dump(value, f)
 
 def event(gr, maps):
     barter = uczestnicy.Handlarz()
@@ -112,11 +120,12 @@ def poruszanie_po_mapie(gr, maps):
             gr.pokaz_plecak()
             getch()
         elif h == '`':
+            zapisz_gre(gr,maps)
             print('Do zobaczenia bohaterze!')
             sleep(2)
             sys.exit(0)
         else:
-            status = 'Zla droga kroczysz!'
+            status = 'Złą drogą kroczysz!'
         widocznosc(gr, maps)
         maps.rysuj_mape()        
         
@@ -211,13 +220,14 @@ def rozpocznij_walke(gr):
 
     while True:
         if gr.pz == 0:
-            print('ZOSTALES ZGLADZONY.')
+            print('ZOSTAŁES ZGŁADZONY.')
             getch()
             rysuj_obrazy.rysuj_animacja_ciag('animated/gameover/gameover.txt', 0.035)
 
-            print('\t\tRozpocznij nowa gre?')
-            print('\t\t1. Nowa gra\t2. Zakoncz gre')
+            print('\t\tRozpocznij nową grę?')
+            print('\t\t1. Nowa gra\t2. Zakończ grę')
             if input() == '1':
+                status = ''
                 nowa_gra()
             else:
                 sys.exit(0)
@@ -227,35 +237,35 @@ def rozpocznij_walke(gr):
 
         while True:
             if h == 'f':
-                status = 'Atakujesz ' + str(potwor.imie) + ' za ' + str(gr.s) + ' obrazen!'
+                status = 'Atakujesz ' + str(potwor.imie) + ' za ' + str(gr.s) + ' obrażeń!'
                 winsound.PlaySound('sound/gracz_atak.wav', winsound.SND_ASYNC)
                 potwor.walka_gui(status, gr)
                 getch()
                 potwor.pz -= gr.s
                 break
             elif h == 'j':
-                b = random.randrange(1, 11)
-                if b in range(1, 3):
+                b = random.randrange(1, 13)
+                if b in range(1, 5):
                     print('UCIECZKA UDANA!')
                     getch()
                     return
                 else:
-                    print('NIE UDALO SIE UCIEC Z WALKI!')
+                    print('NIE UDAŁO SIĘ UCIEC Z WALKI!')
                     getch()
                     break
             else:
-                status = 'Chyba pomylilo Ci sie cos?!'
+                status = 'Chyba pomyliło Ci się coś?!'
                 potwor.walka_gui(status, gr)
                 h = input('\n\nCo robisz?>')
 
         if potwor.pz <= 0:
             winsound.PlaySound('sound/smok_smierc.wav', winsound.SND_ASYNC)
-            print('ZWYCIESTWO!!!')
+            print('ZWYCIĘSTWO!!!')
             print('Otrzymujesz 1000 XP')
             getch()
             return
         else:
-            status = 'Potwor atakuje Cie za ' + str(potwor.s) + ' obrazen!'
+            status = str(potwor.imie) + ' atakuje Cię za ' + str(potwor.s) + ' obrażen!'
             winsound.PlaySound('sound/smok_atak.wav', winsound.SND_ASYNC)
             gr.pz -= potwor.s
             if gr.pz <= 0:

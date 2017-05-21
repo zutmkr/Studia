@@ -1,25 +1,46 @@
+(Alpha v0.013):IN WORKS
+    [Quality of life]:
+        + ulepszyc formatowanie itemow w plecaku na mapie gry               - ...
+        + tłumaczenia (Pl,En,De)                                            - ...
+    [CODE]:
+        + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...
+        + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...
+    [NEW FEATURE]:
+        + edytor podziemi                                                   - ...
+        + zadania i nagrody dla gracza                                      - ...
+        + tablica z iloscia zebranych punktow na koncu gry                  - ...
+        + mozliwosc nadania imienia swojej postaci                          - ...
 
+(Alpha v0.012):
+    [Quality of life]:
+        + dodano nr wersji gry przy LOGO                                    - done
+        + dodano mozliwosc powrotu do gl.m po ekranie game over             - done
+        + gracz bedzie szybciej wiedzial czy sprzedaje/kupuje               - done
+        + ulepszono formatowanie nazw przed. na ekranie handlu              - done + fixed(legendy zle sie wyswietlaja)  
+        + legenda zdobyta na mapie (status) jest teraz opisana konkretniej  - done
+    [CODE]:
+        + zmodyfikowano balans walk
+        + poprawa ekranu GAME OVER                                          - done
+        + okreslic statystyki przedmiotow                                   - done
+        + zoptymalizować metodę Gracz.handel()                              - done
+        + uzdrowiciel skaluje się z poziomem lochu                          - done
+        + obrazenia zadawane przez potwory skaluja sie z poziomem lochu     - done
+        + naprawiono resetowanie sie poziomu lochu po rozpoczeciu 
+        nowej gry przez gracza, z poziomu ekranu game over                  - done
+        + usunieto znacznik kowala i handlarza z widoku mapy                - done + hotfix(usunąłem przez przypadek tez info o plecaku i postaci..)
+        + dodac statystyki do przedmiotow                                   - done + fixed(problem z przypisywaniem stringa +5 do nie legendarnych itemow, itemy z sprzedarzy kopiuja sie do pleacaka przy wyjsciu od handlarza)
 
-    ___                _   _           _         ___                                    
-   /   \___  _ __ ___ | |_| |__  _   _( )__     /   \_   _ _ __   __ _  ___  ___  _ __  
-  / /\ / _ \| '__/ _ \| __| '_ \| | | |/ __|   / /\ / | | | '_ \ / _` |/ _ \/ _ \| '_ \ 
- / /_// (_) | | | (_) | |_| | | | |_| |\__ \  / /_//| |_| | | | | (_| |  __/ (_) | | | |
-/___,' \___/|_|  \___/ \__|_| |_|\__, ||___/ /___,'  \__,_|_| |_|\__, |\___|\___/|_| |_|
-                                 |___/                           |___/                  
-
-                                 
-                                 
-                                 
-                                 
-(Alpha v0.011):IN WORKS
-    + główne menu gry                   - done
-    + tłumaczenia (Pl,En,De)
-    + nowe logo
-    + opcja save game                   - done
-    + obsługa kodowania polskich znaków - done
-    + zwiekszono obrazenia zadawane przez gracza do 15 na 1 poziomie
-    + zwiekszono szanse ucieczki do 25%
-    - ...
+    
+(Alpha v0.011):
+    + główne menu gry                                                   - done
+    + nagroda (zloto) za  wygrane walki                                 - done
+    + opcja save game                                                   - done
+    + obsługa kodowania polskich znaków                                 - done
+    + zwiekszono obrazenia zadawane przez gracza do 15 na 1 poziomie    - done
+    + zwiekszono szanse ucieczki do 25%                                 - done
+    + oprogramowano handel                                              - done 
+    + uzdrowiciel skaluje się z poziomiem                               - done
+    + na ekranie postaci dodano wskażnik ilosći złota                   - done
     
 (Alpha v0.010c):
     - dodano mozliwosc kupowania przedmiotow od handlarza oraz plynny wybor przedmiotów z listy

@@ -3,6 +3,7 @@ import winsound
 import os
 import sys
 import pickle
+from math import ceil
 from msvcrt import getch
 from time import sleep
 
@@ -10,6 +11,8 @@ import pokoj
 import uczestnicy
 import podziemia
 import rysuj_obrazy
+
+
 
 
 prawda_falsz = [True, False]
@@ -29,19 +32,44 @@ def zapisz_gre(gr,maps):
         pickle.dump(len(data), f)
         for value in data:
             pickle.dump(value, f)
+            
+def handel(gr,ha):
+    wyb = ''
 
+    ha.dodaj_do_plecak()
+    ha.dodaj_do_plecak()
+    ha.dodaj_do_plecak()
+
+    
+    while wyb != '0':
+        os.system('cls')  # czyszczenie ekranu
+        rysuj_obrazy.rysuj_potwora('static/handl.txt')
+        print('\t\tSpotykasz Handlarza!!!\n')
+        print('>W czym mogę pomóc?\n\t\t\t Handlarz posiada ', ha.zloto, ' sztuk złota\n')
+        print('\t1) Pokaż mi swoje towary. (kupuj)')
+        print('\t2) Zobacz co mam. (sprzedawaj)')
+        print('\t0) Żegnam.\t\t Twoje złoto: ', gr.zloto)
+        print('AKTUALNA SILA:', gr.s)
+        wyb = input('\nTwój wybór: ')
+        s = 0
+        if wyb == '1':
+            ha.sprzedaj_kup(gr,wyb,s)
+        elif wyb == '2':
+            gr.sprzedaj_kup(ha,wyb,s)
+        
+        
+      
 def event(gr, maps):
-    barter = uczestnicy.Handlarz()
-
+    ha = uczestnicy.Handlarz()
+    ha.zloto *= podziemia.poziom_p * 1.25
     p = random.randint(0,3)
     #p = 1
-    if p == 0:    
+    if p == 0:
         uczestnicy.Uzdrowiciel(gr)
     elif p == 1:
-        barter.handel(gr)
+        handel(gr,ha)
     else:
         rozpocznij_walke(gr)
-
 
 def widocznosc(gr, maps):
     # boki dolne
@@ -211,26 +239,32 @@ def rozpocznij_walke(gr):
         potwor = uczestnicy.Potwor('Demon', 13, 30)
 
     if podziemia.poziom_p > 1:
-        potwor.pz *= podziemia.poziom_p * 0.8
-        potwor.pmax *= podziemia.poziom_p * 0.8
-        potwor.pz = int(potwor.pz)
-        potwor.pmax = int(potwor.pmax)
+        potwor.pz = int(potwor.pz * podziemia.poziom_p * 0.8)
+        potwor.pmax = int(potwor.pmax * podziemia.poziom_p  * 0.8)
+        potwor.s = int(potwor.s * podziemia.poziom_p * 0.6)
 
-    status = ''
+    status = ''    
+    
 
     while True:
         if gr.pz == 0:
+            potwor.walka_gui(status, gr)
             print('ZOSTAŁES ZGŁADZONY.')
             getch()
             rysuj_obrazy.rysuj_animacja_ciag('animated/gameover/gameover.txt', 0.035)
-
+            
             print('\t\tRozpocznij nową grę?')
-            print('\t\t1. Nowa gra\t2. Zakończ grę')
-            if input() == '1':
-                status = ''
-                nowa_gra()
-            else:
-                sys.exit(0)
+            print('\t\t1. Nowa gra\t2.Główne menu \t3. Zakończ grę')
+            while True:
+                d = input('\t\tTwój wybór?>')
+                if d == '1':
+                    from main import nowa_gra
+                    nowa_gra()
+                elif d == '2':
+                    from main import menu_glowne
+                    menu_glowne()
+                elif d == '3':
+                    sys.exit(0)
    
         potwor.walka_gui(status, gr)
         h = input('\n\nCo robisz?>')
@@ -261,7 +295,9 @@ def rozpocznij_walke(gr):
         if potwor.pz <= 0:
             winsound.PlaySound('sound/smok_smierc.wav', winsound.SND_ASYNC)
             print('ZWYCIĘSTWO!!!')
-            print('Otrzymujesz 1000 XP')
+            ile_wygral = 100.0 * 1.25 * podziemia.poziom_p
+            gr.zloto += ile_wygral
+            print("Otrzymujesz ",ile_wygral, " złota.")
             getch()
             return
         else:
@@ -271,16 +307,3 @@ def rozpocznij_walke(gr):
             if gr.pz <= 0:
                 gr.pz = 0        
 
-
-def nowa_gra():
-    gr = uczestnicy.Gracz()
-
-    maps = podziemia.Mapa()
-    
-    maps.mapa[0][0] = gr
-    
-    maps.przygotuj_mape()
-    gr.pobierz_pozycje(maps)
-    widocznosc(gr, maps)
-    maps.rysuj_mape()
-    poruszanie_po_mapie(gr, maps)

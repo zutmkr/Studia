@@ -10,7 +10,7 @@ from rysuj_obrazy import *
 
 PIK = "save/objects.bj"
 
-os.system('mode con: cols=115 lines=40')
+os.system('mode con: cols=115 lines=50')
 
 
 def menu_glowne():
@@ -26,6 +26,7 @@ def menu_glowne():
     
     while True:
         inp = getch().decode("utf-8")
+        #inp = input()
         if inp == 'w' and od >= 7:
             od -= 6
             do -= 6
@@ -54,7 +55,7 @@ def menu_glowne():
     
 def nowa_gra():
     gr = uczestnicy.Gracz()
-    
+    podziemia.poziom_p = 1
     maps = podziemia.Mapa()
     
     maps.mapa[0][0] = gr

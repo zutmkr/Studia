@@ -115,8 +115,8 @@ class Mapa():
         print('\t\t\t\t\t\t\t_ - OTWARTY POKÓJ\ts - ruch w dół')
         print('\t\t\t\t\t\t\t# - ZAMKNIĘTY POKÓJ\ta - ruch w lewo')
         print('\t\t\t\t\t\t\tX - ZEJŚCIE\t\td - ruch w prawo')
-        print('\t\t\t\t\t\t\t$ - HANDLARZ\t\tc - pokaż kartę postaci')
-        print('\t\t\t\t\t\t\t@ - KOWAL\t\ti - pokaż plecak')
+        print('\t\t\t\t\t\t\t\t\tc - pokaż kartę postaci')
+        print('\t\t\t\t\t\t\t\t\ti - pokaż plecak')
         print('\n\t\t\t\t\t\t\t\t\t\t` - wyjście z gry (zapisuje grę)')
 
     def stworz_nowa_mape(self,gr):

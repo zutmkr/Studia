@@ -1,23 +1,56 @@
-        MENU G£ÓWNE
-        -> NOWA GRA
-           KONTYNUUJ
-           EXTRA    (jeszcze nie opr.)
-           WYJD Z GRY
+    ** *MENU G£ÓWNE* **
+     ->  [NOWA GRA]
+         KONTYNUUJ
+           EXTRA    
+        WYJD Z GRY
            
-        MENU G£ÓWNE
-           NOWA GRA
-        -> KONTYNUUJ
-           EXTRA    (jeszcze nie opr.)
-           WYJD Z GRY
+    ** *MENU G£ÓWNE* **
+          NOWA GRA
+     -> [KONTYNUUJ]
+           EXTRA    
+        WYJD Z GRY
 
-        MENU G£ÓWNE
-           NOWA GRA
-           KONTYNUUJ
-        -> EXTRA    (jeszcze nie opr.)
-           WYJD Z GRY
+    ** *MENU G£ÓWNE* **
+          NOWA GRA
+         KONTYNUUJ
+     ->   [EXTRA]    
+        WYJD Z GRY
 
-        MENU G£ÓWNE
-           NOWA GRA
-           KONTYNUUJ
-           EXTRA    (jeszcze nie opr.)
-        -> WYJD Z GRY           
+    ** *MENU G£ÓWNE* **
+          NOWA GRA
+         KONTYNUUJ
+           EXTRA    
+     ->[WYJD Z GRY]           
+     
+       ** *EXTRA* **     
+     ->[EDYTOR LOCHU]
+           OPCJE
+           WRÓÆ
+     
+       ** *EXTRA* **   
+        EDYTOR LOCHU
+     ->   [OPCJE]
+           WRÓÆ     
+     
+       ** *EXTRA* **     
+        EDYTOR LOCHU
+           OPCJE
+     ->   [WRÓÆ]    
+     
+       ** *OPCJE* **
+     -> [JÊZYK GRY]  (Jeszcze nie dostêpne)
+          O GRZE
+           WRÓÆ
+           
+       ** *OPCJE* **
+         JÊZYK GRY   (Jeszcze nie dostêpne)
+     ->  [O GRZE] 
+           WRÓÆ
+     
+       ** *OPCJE* **
+         JÊZYK GRY   (Jeszcze nie dostêpne)
+          O GRZE 
+     ->   [WRÓÆ]     
+     
+     
+     

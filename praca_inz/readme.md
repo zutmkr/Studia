@@ -1,24 +1,24 @@
-(Alpha v0.013):IN WORKS  
-    [Quality of life]:  
+#(Alpha v0.013):IN WORKS  
+    ##[Quality of life]:  
         + ulepszyc formatowanie itemow w plecaku na mapie gry               - ...  
         + tłumaczenia (Pl,En,De)                                            - ...  
-    [CODE]:  
+    ##[CODE]:  
         + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...  
         + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...  
-    [NEW FEATURE]:  
+    ##[NEW FEATURE]:  
         + edytor podziemi                                                   - ...  
         + zadania i nagrody dla gracza                                      - ...  
         + tablica z iloscia zebranych punktow na koncu gry                  - ...  
         + mozliwosc nadania imienia swojej postaci                          - ...  
 
-(Alpha v0.012):  
-    [Quality of life]:  
+#(Alpha v0.012):  
+    ##[Quality of life]:  
         + dodano nr wersji gry przy LOGO                                    - done  
         + dodano mozliwosc powrotu do gl.m po ekranie game over             - done  
         + gracz bedzie szybciej wiedzial czy sprzedaje/kupuje               - done  
         + ulepszono formatowanie nazw przed. na ekranie handlu              - done + fixed(legendy zle sie wyswietlaja)  
         + legenda zdobyta na mapie (status) jest teraz opisana konkretniej  - done  
-    [CODE]:  
+    ##[CODE]:  
         + zmodyfikowano balans walk                                         - done  
         + poprawa ekranu GAME OVER                                          - done  
         + okreslic statystyki przedmiotow                                   - done  
@@ -31,7 +31,7 @@
         + dodac statystyki do przedmiotow                                   - done + fixed(problem z przypisywaniem stringa +5 do nie legendarnych itemow, itemy z sprzedarzy kopiuja sie do pleacaka przy wyjsciu od handlarza)  
 
     
-(Alpha v0.011):  
+#(Alpha v0.011):  
     + główne menu gry                                                   - done  
     + nagroda (zloto) za  wygrane walki                                 - done  
     + opcja save game                                                   - done  

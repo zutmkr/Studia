@@ -1,0 +1,15 @@
+
+
+
+        ****************************************
+        *         NAJWIĘKSI WOJOWNICY          *
+        *IMIĘ      POZIOM        PUNKTY        *
+        *                                      *
+         bebzi     1              -1
+         mati      5              -5
+         sda       2              11
+         asdadadad 2              7
+         wert      2              5
+         robar     1              27
+         weq       1              -1
+         qwe       1              6

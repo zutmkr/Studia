@@ -20,13 +20,12 @@ status = ''
 PIK = "save/objects.bj"
 
 
-
 def sciana():
     global status
     status = 'Nie możesz tam iść, to ściana.'
     
 def zapisz_gre(gr,maps):
-    data = [gr,maps,podziemia.poziom_p,gr.lista]
+    data = [gr,maps, podziemia.poziom_p, gr.lista, gr.zadania]
     
     with open(PIK, "wb") as f:
         pickle.dump(len(data), f)
@@ -48,6 +47,8 @@ def handel(gr,ha):
         print('>W czym mogę pomóc?\n\t\t\t Handlarz posiada ', ha.zloto, ' sztuk złota\n')
         print('\t1) Pokaż mi swoje towary. (kupuj)')
         print('\t2) Zobacz co mam. (sprzedawaj)')
+        if gr.zadania[3] == 1 and gr.zadania[5] == 1:
+            print('\t3) Oddaj zadanie (Dostań nagrodę!)')
         print('\t0) Żegnam.\t\t Twoje złoto: ', gr.zloto)
         print('AKTUALNA SILA:', gr.s)
         wyb = input('\nTwój wybór: ')
@@ -56,8 +57,22 @@ def handel(gr,ha):
             ha.sprzedaj_kup(gr,wyb,s)
         elif wyb == '2':
             gr.sprzedaj_kup(ha,wyb,s)
-        
-        
+        elif gr.zadania[3] == 1 and gr.zadania[4] == 1 and gr.zadania[5] == 1:
+            print("Jesteś POTĘŻNY!\n\
+            Dzięki za zniszczenie ostatniego \n\
+            przedstawiciela jego gatunku. Oto obiecana \n\
+            nagroda.")
+            getch()
+            gr.dodaj_do_plecak()
+            gr.punkty += 15
+            gr.zadania[3] = 0
+            gr.zadania[4] = 0
+            gr.zadania[5] = 0
+            print("Otrzymałeś przedmiot! - ", gr.lista[-1].nazwa)
+            getch()
+
+    if  gr.zadania[3] == 0:
+        ha.quest(gr)    
       
 def event(gr, maps):
     ha = uczestnicy.Handlarz()
@@ -235,6 +250,8 @@ def rozpocznij_walke(gr):
         potwor = uczestnicy.Potwor('Niedzwiedz', 13, 30)
     elif losuj_potwora == 3:
         potwor = uczestnicy.Potwor('Gargulec', 13, 30)
+    elif gr.zadania[3] == 1 and gr.zadania[4] == 1:
+        potwor = uczestnicy.Potwor('Jezdziec', 6, 45)
     else:
         potwor = uczestnicy.Potwor('Demon', 13, 30)
 
@@ -251,8 +268,16 @@ def rozpocznij_walke(gr):
             potwor.walka_gui(status, gr)
             print('ZOSTAŁES ZGŁADZONY.')
             getch()
-            rysuj_obrazy.rysuj_animacja_ciag('animated/gameover/gameover.txt', 0.035)
             
+            dlugosc_poziom = ((9 + len(gr.imie)) -19) * -1
+            dlugosc_punkty = 33 - 9 - len(gr.imie) - dlugosc_poziom
+            
+            
+            with open("score/high_score.txt", "a") as f:
+                f.write("\n         " + gr.imie + (" " * dlugosc_poziom) + str(podziemia.poziom_p) + (" " * dlugosc_punkty) + str(gr.punkty))
+            rysuj_obrazy.rysuj_animacja_ciag('animated/gameover/gameover.txt', 0.035)
+            f.close()
+            rysuj_obrazy.rysuj_score()
             print('\t\tRozpocznij nową grę?')
             print('\t\t1. Nowa gra\t2.Główne menu \t3. Zakończ grę')
             while True:
@@ -264,6 +289,7 @@ def rozpocznij_walke(gr):
                     from main import menu_glowne
                     menu_glowne()
                 elif d == '3':
+    
                     sys.exit(0)
    
         potwor.walka_gui(status, gr)
@@ -295,9 +321,15 @@ def rozpocznij_walke(gr):
         if potwor.pz <= 0:
             winsound.PlaySound('sound/smok_smierc.wav', winsound.SND_ASYNC)
             print('ZWYCIĘSTWO!!!')
-            ile_wygral = 100.0 * 1.25 * podziemia.poziom_p
+            if potwor.imie == "Jezdziec":
+                ile_wygral = 135.0 * 1.45 * podziemia.poziom_p
+                gr.zadania[5] = 1
+            else:
+                ile_wygral = 100.0 * 1.25 * podziemia.poziom_p
+                
             gr.zloto += ile_wygral
             print("Otrzymujesz ",ile_wygral, " złota.")
+            gr.punkty += 5
             getch()
             return
         else:

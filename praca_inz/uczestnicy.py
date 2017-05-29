@@ -16,10 +16,20 @@ class Gracz:
 
     lista = []  # lista przedmiotow
     pozycja = []
+    zadania = []
     punkty = 0
     zloto = 0.0
-    imie = 'Gracz'
-
+    imie = ''
+    
+    def __init__(self):
+        self.zadania = [0,0,0,0,0,0]
+        self.lista = []
+        self.zadania = []
+        self.punkty = 0
+        self.zloto = 0.0
+        self.imie = ''
+        
+        
     # atrybuty postaci
     s = 15  # sila
     pz = 39  # punkty zycia
@@ -28,6 +38,12 @@ class Gracz:
         print('SIŁA postaci: ', self.s)
         print('Pozostałe PUNKTY ŻYCIA: ', self.pz)
         print('Ilość posiadanego ZŁOTA: ', self.zloto)
+    
+    def pokaz_zadania(self):
+        if self.zadania[3] == 1 and self.zadania[4] == 1:
+            with open('quests/zadH1.txt') as plik:
+                print(plik.read())
+        
 
     def pokaz_plecak(self):
         for Przedmiot in self.lista:
@@ -35,9 +51,14 @@ class Gracz:
 
     def karta_postaci(self):
         os.system('cls')  # czyszczenie ekranu
+        print('\n\n\t\t', self.imie, 'WIELKI WOJOWNIK\n\n')
         with open('static/warrior.txt') as plik:
             print(plik.read())
         self.pokaz_staty()
+        self.pokaz_zadania()
+        
+        
+        
 
     def pobierz_pozycje(self, maps):
         for i in range(len(maps.mapa)):
@@ -176,7 +197,53 @@ class Gracz:
                 Przedmiot.nazwa = Przedmiot.nazwa.lstrip()
                 Przedmiot.nazwa = Przedmiot.nazwa.lstrip('-> ')
         
-    
+    def quest(self,gr):        
+        while True:
+            os.system('cls')  # czyszczenie ekranu
+            rysuj_obrazy.rysuj("static/" + self.imie + ".txt")  
+            od = 1
+            do = 3
+            rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",od,do)
+            print('\tt - TAK\tn - NIE')
+            inp = input()
+            #inp = getch().decode("utf-8")
+            if inp == 't':    
+                if type(self) is Uzdrowiciel:
+                    gr.zadania[0] = 1
+                    r = random.choice([True, False])
+                    if r:   #PIERWSZE ZADANIE
+                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",5,7)
+                        gr.zadania[1] = 1
+                        getch()
+                        print('(Gracz): Będzie zrobione!')
+                        getch()
+                    else:   #DRUGIE ZADANIE
+                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",17,19)
+                        gr.zadania[1] = 0
+                        getch()
+                        print('(Gracz): Będzie zrobione!')
+                        getch()           
+                else:   #HANDLARZ
+                    gr.zadania[3] = 1
+                    r = random.choice([True, False])
+                    if r:   #PIERWSZE ZADANIE
+                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",5,8)
+                        gr.zadania[4] = 1
+                        getch()
+                        print('(Gracz): Będzie zrobione!')
+                        getch()
+                    else:   #DRUGIE ZADANIE
+                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",22,24)
+                        gr.zadania[4] = 0
+                        getch()
+                        print('(Gracz): Będzie zrobione!')
+                        getch()
+                return False
+            elif inp == 'n':
+                print('Trudno więc, bywaj...')
+                getch()
+                return False
+            
 class Potwor(Gracz):
     def __init__(self,imie,s,pz):
         self.imie = imie
@@ -197,21 +264,24 @@ class Potwor(Gracz):
 
 class Uzdrowiciel(Gracz):
     def __init__(self, gr):
+        self.zadania = []
+        self.imie = 'uzdr'
         os.system('cls')  # czyszczenie ekranu
         rysuj_obrazy.rysuj_potwora('static/uzdr.txt')
         ile_pkt = 3 * 1.5 * podziemia.poziom_p
         print('Spotykasz Uzdrowiciela!!!')
         print('Otrzymujesz', int(ile_pkt), 'dodatkowych PUNKTÓW ŻYCIA')
+        #funkcje.quest()
         
         gr.pz += int(ile_pkt)
         getch()
-
-
+    
 class Handlarz(Gracz):
 
     lista = []
     zloto = 500.0
-    imie = 'Handlarz'
+    imie = 'handl'
+    zadania = []
 
 
 

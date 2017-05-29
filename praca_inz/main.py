@@ -3,11 +3,12 @@ import sys
 import pickle
 from generator_map import generator
 from msvcrt import getch
+from pdb import set_trace as bp
 
 import podziemia
 import uczestnicy
 import funkcje
-from rysuj_obrazy import * 
+from rysuj_obrazy import *
 
 PIK = "save/objects.bj"
 
@@ -26,8 +27,8 @@ def menu_glowne():
     
     
     while True:
-        inp = getch().decode("utf-8")
-        #inp = input()
+        #inp = getch().decode("utf-8")
+        inp = input()
         if inp == 'w' and od >= 6:
             od -= 6
             do -= 6
@@ -54,11 +55,19 @@ def menu_glowne():
     
 def nowa_gra():
     gr = uczestnicy.Gracz()
+
+    while gr.imie == '':
+        gr.imie = input("NADAJ IMIĘ SWOJEMU WOJOWNIKOWI\n\t")
+        if len(gr.imie) > 9:
+            print('IMIE ZA DLUGIE. MAX 9 ZNAKÓW')
+            gr.imie = ''
+    funkcje.status = ''  
     podziemia.poziom_p = 1
+    
     maps = podziemia.Mapa()
     
     maps.mapa[0][0] = gr
-    
+
     maps.przygotuj_mape()
     gr.pobierz_pozycje(maps)
     funkcje.widocznosc(gr, maps)
@@ -78,6 +87,10 @@ def wczytaj_gre():
     maps = data2[1]
     podziemia.poziom_p = data2[2]
     gr.lista = data2[3]
+    gr.zadania = data2[4]
+    
+    if gr.imie == '':
+        gr.imie = input("NADAJ IMIĘ SWOJEMU WOJOWNIKOWI\n\t")
     
     gr.pobierz_pozycje(maps)
     maps.rysuj_mape()

@@ -6,11 +6,11 @@
         + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...  
         + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...  
 ###    [NEW FEATURE]:  
-        + łądnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented  
-        + edytor podziemi                                                   - partially implemented  
-        + zadania i nagrody dla gracza                                      - ...  
-        + tablica z iloscia zebranych punktow na koncu gry                  - ...  
-        + mozliwosc nadania imienia swojej postaci                          - ...  
+        + łądnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
+        + edytor podziemi                                                   - partially implemented (Buttony jeszcze nie działają) 
+        + zadania i nagrody dla gracza                                      - partially implemented (Tylko 1 zadanie handlarza)  
+        + tablica z iloscia zebranych punktow na koncu gry                  - partially implemented (wszystko działa, ale tablica się nie wypisuje na erkan przy śmierci gracza)  
+        + mozliwosc nadania imienia swojej postaci                          - done  
 
 # (Alpha v0.012):  
 ###    [Quality of life]:  

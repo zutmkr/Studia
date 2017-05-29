@@ -1,0 +1,32 @@
+[ZADANIE NR 1]
+Widzê, ¿e jesteœ POTÊ¯NYM i WIELKIM wojownikiem.
+Mo¿e poœwiêci³ byœ chwilê i wykona³ dla mnie pewne zadanie?
+
+[TAK]:
+    Przynieœ mi piêæ legendarnym przedmiotów, a obdarujê
+    Ciê wiêksz¹ iloœci¹ PUNKTÓW ¯YCIA.
+    
+[NIE]:
+    Trudno...
+    Uwa¿aj na siebie wojowniku. Do zobaczenia.
+    
+[PO WYKONANIU]:
+    O widzê, ¿e znalaz³eœ piêæ legendarnych przedmiotów.
+    Oto Twoja nagroda.
+    
+////////////////////////////////////////////////////////////////////
+[ZADANIE NR 2]
+Widzê, ¿e jesteœ POTÊ¯NYM i WIELKIM wojownikiem.
+Co powiesz na ma³y uk³ad?
+
+[TAK]:
+    Ponoæ w tych lochach mo¿na spotkaæ magiczne stworzenia
+    zg³adŸ trzy z nich, a bêdê posiada³ wiêksz¹ moc uzdrawiania.
+    
+[NIE]:
+    Do nastêpnego spotkania wiêc...
+    
+    
+[PO WYKONANIU]:
+    Œwietnie.
+    Od teraz bêdê potê¿niejszy.

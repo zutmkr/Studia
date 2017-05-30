@@ -1,0 +1,2 @@
+2017-05-30 08:02:29,672 ERROR rysuj_obrazy 'charmap' codec can't decode byte 0x98 in position 76: character maps to <undefined>
+2017-05-30 09:59:07,518 ERROR funkcje [Errno 2] No such file or directory: 'static/.txt'

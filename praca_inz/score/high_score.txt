@@ -13,3 +13,6 @@
          robar     1              27
          weq       1              -1
          qwe       1              6
+         QWE       2              18
+         hero      2              21
+         as        3              63

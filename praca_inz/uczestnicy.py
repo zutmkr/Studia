@@ -24,10 +24,8 @@ class Gracz:
     def __init__(self):
         self.zadania = [0,0,0,0,0,0]
         self.lista = []
-        self.zadania = []
         self.punkty = 0
         self.zloto = 0.0
-        self.imie = ''
         
         
     # atrybuty postaci
@@ -43,7 +41,9 @@ class Gracz:
         if self.zadania[3] == 1 and self.zadania[4] == 1:
             with open('quests/zadH1.txt') as plik:
                 print(plik.read())
-        
+        else:
+            with open('quests/brak.txt') as plik:
+                print(plik.read())
 
     def pokaz_plecak(self):
         for Przedmiot in self.lista:
@@ -264,7 +264,6 @@ class Potwor(Gracz):
 
 class Uzdrowiciel(Gracz):
     def __init__(self, gr):
-        self.zadania = []
         self.imie = 'uzdr'
         os.system('cls')  # czyszczenie ekranu
         rysuj_obrazy.rysuj_potwora('static/uzdr.txt')
@@ -277,11 +276,11 @@ class Uzdrowiciel(Gracz):
         getch()
     
 class Handlarz(Gracz):
-
+    def __init__(self):
+        self.zloto = 500.0
     lista = []
-    zloto = 500.0
     imie = 'handl'
-    zadania = []
+
 
 
 

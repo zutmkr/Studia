@@ -12,7 +12,9 @@ import uczestnicy
 import podziemia
 import rysuj_obrazy
 
-
+import logging
+logging.basicConfig(filename='error_logs/errors.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(name)s %(message)s')
+logger=logging.getLogger(__name__)
 
 
 prawda_falsz = [True, False]
@@ -71,8 +73,11 @@ def handel(gr,ha):
             print("Otrzymałeś przedmiot! - ", gr.lista[-1].nazwa)
             getch()
 
-    if  gr.zadania[3] == 0:
-        ha.quest(gr)    
+    try:
+        if gr.zadania[3] == 0:
+            ha.quest(gr)
+    except Exception as e:
+        logger.error(e)    
       
 def event(gr, maps):
     ha = uczestnicy.Handlarz()
@@ -250,7 +255,7 @@ def rozpocznij_walke(gr):
         potwor = uczestnicy.Potwor('Niedzwiedz', 13, 30)
     elif losuj_potwora == 3:
         potwor = uczestnicy.Potwor('Gargulec', 13, 30)
-    elif gr.zadania[3] == 1 and gr.zadania[4] == 1:
+    elif gr.zadania[3] == 1 and gr.zadania[4] == 1 and gr.zadania[5] == 0:
         potwor = uczestnicy.Potwor('Jezdziec', 6, 45)
     else:
         potwor = uczestnicy.Potwor('Demon', 13, 30)
@@ -277,8 +282,9 @@ def rozpocznij_walke(gr):
                 f.write("\n         " + gr.imie + (" " * dlugosc_poziom) + str(podziemia.poziom_p) + (" " * dlugosc_punkty) + str(gr.punkty))
             rysuj_obrazy.rysuj_animacja_ciag('animated/gameover/gameover.txt', 0.035)
             f.close()
+            
             rysuj_obrazy.rysuj_score()
-            print('\t\tRozpocznij nową grę?')
+            print('\n\n\t\tRozpocznij nową grę?')
             print('\t\t1. Nowa gra\t2.Główne menu \t3. Zakończ grę')
             while True:
                 d = input('\t\tTwój wybór?>')
@@ -289,7 +295,6 @@ def rozpocznij_walke(gr):
                     from main import menu_glowne
                     menu_glowne()
                 elif d == '3':
-    
                     sys.exit(0)
    
         potwor.walka_gui(status, gr)

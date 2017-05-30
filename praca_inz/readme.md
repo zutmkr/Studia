@@ -1,17 +1,35 @@
-# (Alpha v0.013):IN WORK 
+# (Beta v0.020RC):IN WORK 
 ###    [Quality of life]:  
         + ulepszyc formatowanie itemow w plecaku na mapie gry               - ...  
-        + tłumaczenia (Pl,En,De)                                            - ...  
+        + tłumaczenia (Pl,En,De)                                            - ...
 ###    [CODE]:  
         + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...  
         + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...  
+        + dodanie algorytmu wyszukiwania sciezki                            - ...
 ###    [NEW FEATURE]:  
         + łądnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
         + edytor podziemi                                                   - partially implemented (Buttony jeszcze nie działają) 
-        + zadania i nagrody dla gracza                                      - partially implemented (Tylko 1 zadanie handlarza)  
-        + tablica z iloscia zebranych punktow na koncu gry                  - partially implemented (wszystko działa, ale tablica się nie wypisuje na erkan przy śmierci gracza)  
-        + mozliwosc nadania imienia swojej postaci                          - done  
+###    [KNOWN BUGS]:
+        + wybranie 'nowej gry' po ekranie smierci przenosi do Głównego menu - ...
 
+# (Alpha v0.013):
+###    [Quality of life]:  
+        + ulepszyc formatowanie itemow w plecaku na mapie gry               - ...  
+        + tłumaczenia (Pl,En,De)                                            - ...
+###    [CODE]:  
+        + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...  
+        + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...  
+        + błąd złapany przez wyjątek jest teraz zapisywany do pliku         - done
+###    [NEW FEATURE]:  
+        + łądnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
+        + edytor podziemi                                                   - partially implemented (Buttony jeszcze nie działają) 
+        + zadania i nagrody dla gracza                                      - done + info(Tylko 1 zadanie handlarza)  
+        + tablica z iloscia zebranych punktow na koncu gry                  - done
+        + mozliwosc nadania imienia swojej postaci                          - done  
+###    [KNOWN BUGS]:
+        + tablica wyników nie wypisuje się na ekran po śmierci gracza       - fixed
+        + wybranie 'nowej gry' po ekranie smierci przenosi do Głównego menu - ...
+        
 # (Alpha v0.012):  
 ###    [Quality of life]:  
         + dodano nr wersji gry przy LOGO                                    - done  

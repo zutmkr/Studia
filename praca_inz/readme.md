@@ -13,12 +13,7 @@
         + wybranie 'nowej gry' po ekranie smierci przenosi do Głównego menu - ...
 
 # (Alpha v0.013):
-###    [Quality of life]:  
-        + ulepszyc formatowanie itemow w plecaku na mapie gry               - ...  
-        + tłumaczenia (Pl,En,De)                                            - ...
 ###    [CODE]:  
-        + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...  
-        + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...  
         + błąd złapany przez wyjątek jest teraz zapisywany do pliku         - done
 ###    [NEW FEATURE]:  
         + łądnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
@@ -28,7 +23,6 @@
         + mozliwosc nadania imienia swojej postaci                          - done  
 ###    [KNOWN BUGS]:
         + tablica wyników nie wypisuje się na ekran po śmierci gracza       - fixed
-        + wybranie 'nowej gry' po ekranie smierci przenosi do Głównego menu - ...
         
 # (Alpha v0.012):  
 ###    [Quality of life]:  

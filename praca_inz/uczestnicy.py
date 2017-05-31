@@ -29,7 +29,7 @@ class Gracz:
         
         
     # atrybuty postaci
-    s = 15  # sila
+    s = 15 # sila
     pz = 39  # punkty zycia
 
     def pokaz_staty(self):
@@ -57,9 +57,6 @@ class Gracz:
         self.pokaz_staty()
         self.pokaz_zadania()
         
-        
-        
-
     def pobierz_pozycje(self, maps):
         for i in range(len(maps.mapa)):
             try:

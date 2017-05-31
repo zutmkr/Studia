@@ -289,10 +289,10 @@ def rozpocznij_walke(gr):
             while True:
                 d = input('\t\tTwój wybór?>')
                 if d == '1':
-                    from main import nowa_gra
+                    from __main__ import nowa_gra
                     nowa_gra()
                 elif d == '2':
-                    from main import menu_glowne
+                    from __main__ import menu_glowne
                     menu_glowne()
                 elif d == '3':
                     sys.exit(0)

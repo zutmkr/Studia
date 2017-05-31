@@ -3,3 +3,4 @@ class Pokoj:
     event = False
     widoczny = False
     przedmiot = True
+    

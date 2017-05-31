@@ -1,16 +1,19 @@
-# (Beta v0.020RC):IN WORK 
-###    [Quality of life]:  
+# (Beta v0.020aRC):IN WORK 
+###    [FUTURE]:  
         + ulepszyc formatowanie itemow w plecaku na mapie gry               - ...  
         + tłumaczenia (Pl,En,De)                                            - ...
-###    [CODE]:  
         + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...  
         + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...  
-        + dodanie algorytmu wyszukiwania sciezki                            - ...
 ###    [NEW FEATURE]:  
-        + łądnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
-        + edytor podziemi                                                   - partially implemented (Buttony jeszcze nie działają) 
+        + ładnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
+        + edytor podziemi (required for Beta)                               - partially implemented (Buttony jeszcze nie działają) 
+
+# (Beta v0.020RC):
+###    [CODE]:   
+        + dodanie algorytmu wyszukiwania sciezki  A*                        - done
+        + mapa generuje się w trzech wariantach wielkości                   - done
 ###    [KNOWN BUGS]:
-        + wybranie 'nowej gry' po ekranie smierci przenosi do Głównego menu - ...
+        + wybranie 'nowej gry' po ekranie smierci przenosi do Głównego menu - fixed (okazało się, że python wykorzystuje 'import __main__' w celu wykorzystania metod skryptu inicjalizującego)
 
 # (Alpha v0.013):
 ###    [CODE]:  
@@ -25,7 +28,7 @@
         + tablica wyników nie wypisuje się na ekran po śmierci gracza       - fixed
         
 # (Alpha v0.012):  
-###    [Quality of life]:  
+###    [QUALITY OF LIFE]:  
         + dodano nr wersji gry przy LOGO                                    - done  
         + dodano mozliwosc powrotu do gl.m po ekranie game over             - done  
         + gracz bedzie szybciej wiedzial czy sprzedaje/kupuje               - done  

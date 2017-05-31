@@ -65,10 +65,8 @@ def nowa_gra():
     podziemia.poziom_p = 1
     
     maps = podziemia.Mapa()
-    
-    maps.mapa[0][0] = gr
-
     maps.przygotuj_mape()
+    maps.mapa[0][0] = gr
     gr.pobierz_pozycje(maps)
     funkcje.widocznosc(gr, maps)
     maps.rysuj_mape()

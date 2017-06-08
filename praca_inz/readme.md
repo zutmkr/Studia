@@ -1,26 +1,32 @@
-# (Beta v0.020aRC):IN WORK 
+# (Beta v0.1b): IN WORK
 ###    [FUTURE]:  
-        + ulepszyc formatowanie itemow w plecaku na mapie gry               - ...  
+        + ulepszyć formatowanie itemów w plecaku na mapie gry               - ...  
         + tłumaczenia (Pl,En,De)                                            - ...
-        + nowa statystyka przedmiotow, gracza i potworow - pancerz          - ...  
-        + rzadkie przedmioty zwiakszaja pancerz gracza                      - ...  
+        + nowa statystyka przedmiotów, gracza i potworów - pancerz          - ...  
+        + rzadkie przedmioty zwiakszają pancerz gracza                      - ...
+###    [EDITOR v0.03]:
+        + poprawiono okienko WCZYTAJ                                        - done
+        + naprawiono pomniejsze błędy                                       - done
 ###    [NEW FEATURE]:  
-        + ładnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
-        + edytor podziemi (required for Beta)                               - partially implemented (Buttony jeszcze nie działają) 
-
+        + ładniejsze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje JĘZYKa oraz O GRZE) 
+        + dodano informację o statusie aktualnego zadania                   - done
+        
+# (Beta v0.1a):
+###    [NEW FEATURE]:  
+        + edytor podziemi v0.02                                             - done
+        + dodano drugie zadanie dla Handlarza                               - done
+        
 # (Beta v0.020RC):
 ###    [CODE]:   
-        + dodanie algorytmu wyszukiwania sciezki  A*                        - done
-        + mapa generuje się w trzech wariantach wielkości                   - done
+        + dodanie algorytmu wyszukiwania ścieżki  A*                        - done
+        + mapa generuje się w trzech wariantach wielkości                   - done      
 ###    [KNOWN BUGS]:
-        + wybranie 'nowej gry' po ekranie smierci przenosi do Głównego menu - fixed (okazało się, że python wykorzystuje 'import __main__' w celu wykorzystania metod skryptu inicjalizującego)
+        + wybranie 'nowej gry' po ekranie śmierci przenosi do Głównego menu - fixed (okazało się, że python wykorzystuje 'import __main__' w celu wykorzystania metod skryptu inicjalizującego)
 
 # (Alpha v0.013):
 ###    [CODE]:  
         + błąd złapany przez wyjątek jest teraz zapisywany do pliku         - done
 ###    [NEW FEATURE]:  
-        + łądnijesze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje OPCJI oraz O GRZE) 
-        + edytor podziemi                                                   - partially implemented (Buttony jeszcze nie działają) 
         + zadania i nagrody dla gracza                                      - done + info(Tylko 1 zadanie handlarza)  
         + tablica z iloscia zebranych punktow na koncu gry                  - done
         + mozliwosc nadania imienia swojej postaci                          - done  

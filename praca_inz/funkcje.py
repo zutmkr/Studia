@@ -66,16 +66,30 @@ def handel(gr,ha):
             nagroda.")
             getch()
             gr.dodaj_do_plecak()
-            gr.punkty += 15
+            gr.punkty += 10
             gr.zadania[3] = 0
             gr.zadania[4] = 0
             gr.zadania[5] = 0
             print("Otrzymałeś przedmiot! - ", gr.lista[-1].nazwa)
             getch()
-
+        elif gr.zadania[3] == 1 and gr.zadania[4] == 0 and gr.zadania[5] == 1:
+            print("\tJesteś WIELKI!\n\
+            Te gargulce nieprędko wrócą. \n\
+            W końcu będę miał spokój. Oto obiecana \n\
+            nagroda.")
+            getch()
+            gr.dodaj_do_plecak()
+            gr.punkty += 20
+            gr.zadania[3] = 0
+            gr.zadania[4] = 0
+            gr.zadania[5] = 0
+            uczestnicy.gargulce = 0
+            print("Otrzymałeś przedmiot! - ", gr.lista[-1].nazwa)
+            getch()
     try:
-        if gr.zadania[3] == 0:
-            ha.quest(gr)
+        if random.choice(prawda_falsz):
+            if gr.zadania[3] == 0:
+                ha.quest(gr)
     except Exception as e:
         logger.error(e)    
       
@@ -329,6 +343,12 @@ def rozpocznij_walke(gr):
             if potwor.imie == "Jezdziec":
                 ile_wygral = 135.0 * 1.45 * podziemia.poziom_p
                 gr.zadania[5] = 1
+            elif potwor.imie == "Gargulec" and gr.zadania[3] == 1 and gr.zadania[4] == 0:
+                ile_wygral = 135.0 * 1.45 * podziemia.poziom_p
+                if uczestnicy.gargulce > 1:
+                    gr.zadania[5] = 1
+                else:
+                    uczestnicy.gargulce = uczestnicy.gargulce + 1
             else:
                 ile_wygral = 100.0 * 1.25 * podziemia.poziom_p
                 

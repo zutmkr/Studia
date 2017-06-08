@@ -5,13 +5,13 @@
                                  |   |  /|
   .------------------------------------' |
  /  .-.             (Handlarz)           |
-|  /   \    Od teraz na mapie mo¿esz     |
-| |\_.  |   spotkaæ Je¿dzca.             |
+|  /   \    Gargulce ci¹gle uprzykszaj¹  |
+| |\_.  |   ¿ycie handlarza.             |
 |\|  | /|                                |
-| `---' |   Zniszcz go, a otrzymasz      |
+| `---' |   Zniszcz dwa, a otrzymasz     |
 |       |            NAGRODÊ             |
 |       |                                |
-|       |    Zniszczony Je¿dziec (0/1)  /
+|       |     Zabite Gargulce (2/2)     /
 |       |------------------------------'
 \       |
  \     /

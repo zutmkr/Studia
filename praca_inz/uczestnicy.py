@@ -10,7 +10,7 @@ import pokoj
 import funkcje
 
 prawda_falsz = [True, False]
-
+gargulce = 0
 
 class Gracz:
 
@@ -38,8 +38,20 @@ class Gracz:
         print('Ilość posiadanego ZŁOTA: ', self.zloto)
     
     def pokaz_zadania(self):
-        if self.zadania[3] == 1 and self.zadania[4] == 1:
+        if self.zadania[3] == 1 and self.zadania[4] == 1 and self.zadania[5] == 0:
             with open('quests/zadH1.txt') as plik:
+                print(plik.read())
+        elif self.zadania[3] == 1 and self.zadania[4] == 1 and self.zadania[5] == 1:
+            with open('quests/zadH11.txt') as plik:
+                print(plik.read())
+        elif self.zadania[3] == 1 and self.zadania[4] == 0 and gargulce == 0:
+            with open('quests/zadH2.txt') as plik:
+                print(plik.read())
+        elif self.zadania[3] == 1 and self.zadania[4] == 0 and gargulce == 1:
+            with open('quests/zadH21.txt') as plik:
+                print(plik.read())
+        elif self.zadania[3] == 1 and self.zadania[4] == 0 and gargulce > 1:
+            with open('quests/zadH22.txt') as plik:
                 print(plik.read())
         else:
             with open('quests/brak.txt') as plik:
@@ -212,13 +224,13 @@ class Gracz:
                         rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",5,7)
                         gr.zadania[1] = 1
                         getch()
-                        print('(Gracz): Będzie zrobione!')
+                        print('(' + gr.imie + '): Będzie zrobione!')
                         getch()
                     else:   #DRUGIE ZADANIE
                         rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",17,19)
                         gr.zadania[1] = 0
                         getch()
-                        print('(Gracz): Będzie zrobione!')
+                        print('(' + gr.imie + '): Będzie zrobione!')
                         getch()           
                 else:   #HANDLARZ
                     gr.zadania[3] = 1
@@ -227,13 +239,13 @@ class Gracz:
                         rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",5,8)
                         gr.zadania[4] = 1
                         getch()
-                        print('(Gracz): Będzie zrobione!')
+                        print('(' + gr.imie + '): Będzie zrobione!')
                         getch()
                     else:   #DRUGIE ZADANIE
                         rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",22,24)
                         gr.zadania[4] = 0
                         getch()
-                        print('(Gracz): Będzie zrobione!')
+                        print('(' + gr.imie + '): Będzie zrobione!')
                         getch()
                 return False
             elif inp == 'n':

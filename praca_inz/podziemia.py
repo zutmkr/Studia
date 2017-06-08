@@ -6,21 +6,31 @@ import rysuj_obrazy
 import pokoj
 import funkcje
 import pole
+
+
 from msvcrt import getch
 ile_map = 0
 rodzaj_mapy = [[0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0], [0,0,0,0,0,0,0,0,0,0,0]]
-#rodzaj_mapy = [0, 0, 0, 0, 0, 0, 0]
 prawda_falsz = [True, False]
 poziom_p = 1
-wybrana = 0
 
 
 class Mapa():
-    def __init__(self):
+    def __init__(self, wielkosc_mapygen = None):
         global ile_map
         global wybrana
+
         # tworzenie mapy gry
-        wielkosc_mapy = random.choice(rodzaj_mapy)
+        if wielkosc_mapygen is not None:
+            if wielkosc_mapygen.get() == 7:
+                wielkosc_mapy = [0,0,0,0,0,0,0]
+            elif wielkosc_mapygen.get() == 9:
+                wielkosc_mapy = [0,0,0,0,0,0,0,0,0]
+            elif wielkosc_mapygen.get() == 11:
+                wielkosc_mapy = [0,0,0,0,0,0,0,0,0,0,0]
+        else:
+            wielkosc_mapy = random.choice(rodzaj_mapy)
+
         wybrana = wielkosc_mapy
         self.mapa = []  # ATR: MAPA
         for i in range(len(wielkosc_mapy)): self.mapa.append(wielkosc_mapy[:])
@@ -38,7 +48,8 @@ class Mapa():
                     self.mapa[i][j].otwarty = False
                 k += 1
         self.mapa[len(wielkosc_mapy)-1][len(wielkosc_mapy)-1].otwarty = True
-    def przygotuj_mape(self):
+
+    def przygotuj_mape(self, wielkosc_mapygen = None):
         global ile_map
         global wybrana
         wielkosc_mapy = wybrana #random.choice(rodzaj_mapy)
@@ -66,7 +77,10 @@ class Mapa():
                 if Pole.x == (len(wielkosc_mapy) - 1) and Pole.y == (len(wielkosc_mapy) - 1):
                     mapa_ok = 1
             if not lista_otwarta:
-                self.__init__()
+                if wielkosc_mapygen is not None:
+                    self.__init__(wielkosc_mapygen)
+                else:
+                    self.__init__()
                 ile_map += 1
                 wielkosc_mapy = wybrana
                 lista_otwarta = []
@@ -148,57 +162,7 @@ class Mapa():
             lista_zamknieta.append(aktualny)
             if mapa_ok == 1:
                 return True
-            
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        '''if len(self.mapa[0]) == 3:
-            self.mapa[1][0].otwarty = True
-            self.mapa[1][1].otwarty = True
-            self.mapa[1][2].otwarty = True
-            self.mapa[2][2].otwarty = True
-        elif len(self.mapa[0]) == 5:
-            self.mapa[1][0].otwarty = True
-            self.mapa[1][1].otwarty = True
-            self.mapa[1][2].otwarty = True
-            self.mapa[2][2].otwarty = True
-            self.mapa[2][3].otwarty = True
-            self.mapa[3][3].otwarty = True
-            self.mapa[3][4].otwarty = True
-            self.mapa[4][4].otwarty = True
-        elif len(self.mapa[0]) == 7:
-            self.mapa[1][0].otwarty = True
-            self.mapa[1][1].otwarty = True
-            self.mapa[2][1].otwarty = True
-            self.mapa[3][1].otwarty = True
-            self.mapa[3][2].otwarty = True
-            self.mapa[4][2].otwarty = True
-            self.mapa[5][2].otwarty = True
-            self.mapa[2][2].otwarty = True
-            self.mapa[2][3].otwarty = True
-            self.mapa[2][4].otwarty = True
-            self.mapa[3][4].otwarty = True
-            self.mapa[5][3].otwarty = True
-            self.mapa[6][3].otwarty = True
-            self.mapa[6][4].otwarty = True
-            self.mapa[6][5].otwarty = True
-            self.mapa[6][6].otwarty = True'''
+
 
     def rysuj_mape(self):
         global poziom_p

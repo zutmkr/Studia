@@ -11,7 +11,7 @@
 | `---' |   Zniszcz go, a otrzymasz      |
 |       |            NAGRODÊ             |
 |       |                                |
-|       |    Zniszczony Je¿dziec (0/1)  /
+|       |    Zniszczony Je¿dziec (1/1)  /
 |       |------------------------------'
 \       |
  \     /

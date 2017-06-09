@@ -3,6 +3,7 @@ import winsound
 import os
 import sys
 import pickle
+import logging
 from math import ceil
 from msvcrt import getch
 from time import sleep
@@ -12,7 +13,7 @@ import uczestnicy
 import podziemia
 import rysuj_obrazy
 
-import logging
+
 logging.basicConfig(filename='error_logs/errors.log', level=logging.DEBUG, format='%(asctime)s %(levelname)s %(name)s %(message)s')
 logger=logging.getLogger(__name__)
 

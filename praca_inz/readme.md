@@ -1,14 +1,22 @@
-# (Beta v0.1b): IN WORK
-###    [FUTURE]:  
+# (Beta v0.2):
+###    [IN FUTURE]:  
         + ulepszyć formatowanie itemów w plecaku na mapie gry               - ...  
         + tłumaczenia (Pl,En,De)                                            - ...
         + nowa statystyka przedmiotów, gracza i potworów - pancerz          - ...  
         + rzadkie przedmioty zwiakszają pancerz gracza                      - ...
+        + dodanie tłumaczeń i odblokowanie opcji JĘZYK                      - ...
+###    [CODE]:
+        + poprwawione kodowanie pliku (ang\PL\menu_glowne_instrukcje.txt)   - done
+        + dodano instrukcje zamykające plik w module rysuj_obrazy           - done
+        + lekkie uporządkowanie kodu                                        - done
+###    [NEW FEATURE]:  
+        + odblokowana opcja O GRZE                                          - done 
+
+# (Beta v0.1b):
 ###    [EDITOR v0.03]:
         + poprawiono okienko WCZYTAJ                                        - done
         + naprawiono pomniejsze błędy                                       - done
 ###    [NEW FEATURE]:  
-        + ładniejsze menu gry oraz odblokowana opcja EXTRA                  - partially implemented (Brakuje JĘZYKa oraz O GRZE) 
         + dodano informację o statusie aktualnego zadania                   - done
         
 # (Beta v0.1a):

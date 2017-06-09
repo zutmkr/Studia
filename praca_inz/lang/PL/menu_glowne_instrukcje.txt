@@ -1,4 +1,4 @@
                                                     INSTRUKCJE
-                                                w - strza³ka w górê
-                                                s - strza³ka w dó³
-                                                k - zaakceptuj wybór
+                                                w - strzaÅ‚ka w gÃ³rÄ™
+                                                s - strzaÅ‚ka w dÃ³Å‚
+                                                k - zaakceptuj wybÃ³r

@@ -52,7 +52,8 @@ def menu_glowne():
                 extra()
             elif od >=18 and do <=24:
                 wyjdz_z_gry()
-    
+   
+   
 def nowa_gra(poziom_pgen = None, wielkosc_mapygen = None, punkty_zycia = None, sila = None):
     gr = uczestnicy.Gracz()
     while gr.imie == '':
@@ -78,6 +79,7 @@ def nowa_gra(poziom_pgen = None, wielkosc_mapygen = None, punkty_zycia = None, s
     maps.rysuj_mape()
     funkcje.poruszanie_po_mapie(gr, maps)
 
+    
 def wczytaj_gre():
     data2 = []
     gr = uczestnicy.Gracz()
@@ -100,9 +102,11 @@ def wczytaj_gre():
     maps.rysuj_mape()
     funkcje.poruszanie_po_mapie(gr, maps)
 
+    
 def wyjdz_z_gry():
     sys.exit(0)
 
+    
 def extra():
     od = 24
     do = 28  
@@ -148,8 +152,8 @@ def opcje():
     
     
     while True:
-        inp = getch().decode("utf-8")
-        #inp = input()
+        #inp = getch().decode("utf-8")
+        inp = input()
         if inp == 'w' and od >= 43:
             od -= 5
             do -= 5
@@ -166,15 +170,13 @@ def opcje():
             rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
         elif inp == 'k':
             if od >=39 and do <=43:
-                print('Jeszcze nie zaimplementowano')
                 getch()
             elif od >=43 and do <=48:
-                print('Jeszcze nie zaimplementowano')
-                getch()
+                os.system('cls')  # czyszczenie ekranu
+                rysuj("static/O_GRZE.txt")
+                return False
             elif od >=48 and do <=54:
                 extra()
     
     
 menu_glowne()
-
-

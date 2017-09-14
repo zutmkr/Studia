@@ -1,5 +1,5 @@
 
-# **Dorothy's Dungeon 2**
+![Logo](https://github.com/zutmkr/Studia/blob/master/praca_mag/static/coollogo_com-7011398.png)
 
 
 ## (Pre-Alpha):
@@ -13,8 +13,8 @@
     + translations (Pl, En, De) 
     + new attributes - Armor, Durability
         ++ Armor will reduce the amount of damage taken by .% (Monsters and items)
-        ++ Durability  will be a numericall indycator on items. When durability go below 1, the item will be destroyed
-           and can no longer be used by character.
+        ++ Durability  will be a numericall indycator on items. When durability go below 1,
+           the item will be destroyed and can no longer be used by character.
     + rare items enhance the player's armor 
     + adding translations and unlocking the LANGUAGE option 
     + rework itemization

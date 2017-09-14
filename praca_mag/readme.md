@@ -18,3 +18,6 @@
     + rare items enhance the player's armor 
     + adding translations and unlocking the LANGUAGE option 
     + rework itemization
+    + skills can be used by player and monsters
+        ++ skills are learned from weapons
+    + ...

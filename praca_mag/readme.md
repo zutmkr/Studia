@@ -20,4 +20,9 @@
     + rework itemization
     + skills can be used by player and monsters
         ++ skills are learned from weapons
+    + add documentation
+        ++ Game Design Document
+        ++ Test Strategy
+    + Boss fights every 5 levels of dungeon
+    + xbox360 controller support
     + ...

@@ -1,3 +1,6 @@
+
+![Logo](https://github.com/zutmkr/Studia/blob/master/praca_inz/static/logo.PNG)
+
 # (Beta v0.2):
 ###    *[TO DO]*:  
         + ulepszyć formatowanie itemów w plecaku na mapie gry       

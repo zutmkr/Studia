@@ -2,8 +2,12 @@
 # **Dorothy's Dungeon 2**
 
 
-# (Pre-Alpha):
+## (Pre-Alpha):
 ###    [TO DO]:
+        + code refactoring
+            ++ TDD methology (Test Driven Development)
+            ++ code naming change (Pol -> Eng)
+            ++ PEP8
         + select the framework 
         + develop a network module 
         + translations (Pl, En, De) 

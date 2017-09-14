@@ -4,25 +4,37 @@
 
 ## (Pre-Alpha):
 ####    [TO DO]:
-    + code refactor
+    + Code refactor
         ++ TDD methology (Test Driven Development) - what should be tested?
-        ++ code naming change (Pol -> Eng)
+        ++ Code naming change (Pol -> Eng)
         ++ PEP8
-    + select framework (pygame?)
-    + develop a network module (LAN Multiplayer / Co-op / PvP)
-    + translations (Pl, En, De) 
-    + new attributes - Armor, Durability
-        ++ Armor will reduce the amount of damage taken by .% (Monsters and items)
-        ++ Durability  will be a numericall indycator on items. When durability go below 1,
-           the item will be destroyed and can no longer be used by character.
-    + rare items enhance the player's armor 
-    + adding translations and unlocking the LANGUAGE option 
-    + rework itemization
-    + skills can be used by player and monsters
-        ++ skills are learned from weapons
-    + add documentation
+    + Select framework
+        ++ pygame?
+    + Develop a network module
+        ++ LAN Multiplayer
+            +++ Co-op campaign
+            +++ PvP
+        ++ Async movement
+            +++ Turn based?
+    + Translations (Pl, En, De) 
+    + New attributes
+        ++ Armor
+            +++ Armor will reduce the amount of damage taken by .% (Monsters and items)
+        ++ Durability
+            +++ Durability  will be a numericall indycator on items. When durability go below 1,
+                the item will be destroyed and can no longer be used by character.
+    + Rare items enhance the player's armor 
+    + Adding translations and unlocking the LANGUAGE option 
+    + Rework itemization
+        ++ Crafting
+        ++ Enchanting
+        ++ Disassembling
+        ++ Upgrading (item level)
+    + Skills can be used by player and monsters
+        ++ Skills are learned from weapons, armors and accessories
+    + Add documentation
         ++ Game Design Document
         ++ Test Strategy
     + Boss fights every 5 levels of dungeon
-    + xbox360 controller support
+    + Xbox360 controller support
     + ...

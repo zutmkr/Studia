@@ -6,8 +6,10 @@
 ####    [TO DO]:
     + Code refactor
         ++ TDD methology (Test Driven Development) - what should be tested?
+            +++ use Python 'unittest' library
         ++ Code naming change (Pol -> Eng)
         ++ PEP8
+        ++ Python ver. 3.6.2
     + Select framework
         ++ pygame?
     + Develop a network module

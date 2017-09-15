@@ -35,11 +35,13 @@
         ++ Adding base items
             +++ Normal
             +++ Magic
-                ++++ Magic items enhance the player damage/resist
+                ++++ enhance the player's damage/resist
             +++ Rare
-                ++++ Rare items enhance the player's armor 
+                ++++ enhance the player's armor 
             +++ Unique
+                ++++ speed up learning of a skill
             +++ Legendary
+                ++++ can learn ultimate skills
         ++ New attributes
             +++ Durability - numericall indycator on items. When durability go below 1,
                 the item will be destroyed and can no longer be used by character.
@@ -49,6 +51,10 @@
             +++ Fire Element
             +++ Ice Element
             +++ Magic
+        ++ Skill groups
+            +++ Active - cast instantly
+            +++ Passive - always active
+            +++ Hybrid - cast instantly and delivers over time
         ++ Skills are learned from weapons, armors and accessories
     + Add documentation
         ++ Game Design Document

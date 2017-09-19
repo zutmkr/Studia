@@ -20,6 +20,7 @@
             +++ low level programming
             +++ 2D graphic
             +++ multiplayer = sockets, Twisted
+            +++ wast documentation
             +++ old???
         ++ kivy
             +++ high level programming
@@ -32,21 +33,27 @@
         ++ LAN Multiplayer
             +++ Co-op campaign
             +++ PvP
-        ++ Async movement
+        ++ Async movement?
             +++ Turn based?
+            +++ Real time?
             
     + Translations (Pl, En, De) 
+        ++ Unlocking the LANGUAGE option 
     
     + New player attributes
         ++ Damage - combination of Strenght item Damage and item type
         ++ Armor - will reduce the amount of all damage taken by .% (Monsters and items)
         ++ Resist - will reduce the amount of specific damage taken by .% (Monsters and items)
         
-    + New NPC
-        ++ Smith - can upgrade/repair/craft items
-        ++ ...
-        
-    + Adding translations and unlocking the LANGUAGE option 
+    + NPCs
+        ++ Smith - can upgrade/disassemble/repair/craft items
+            +++ Can upgrade
+                ++++ Level 1: 
+        ++ Healer - add hit points to character
+            +++ Can upgrade infinitely:
+                ++++ Every level: recovers 20HP more
+                ++++ Cost: "amount of gold" * dungeon_level
+        ++ Shopkeeper - will sell/buy items
     
     + Rework itemization
         ++ Crafting

@@ -44,23 +44,27 @@
         ++ Unlocking the LANGUAGE option 
     
     + New player attributes
-        ++ Damage - combination of Strenght item Damage and item type
+        ++ Damage - combination of Strenght, item Damage and item type
         ++ Armor - will reduce the amount of all damage taken by .% (Monsters and items)
         ++ Resist - will reduce the amount of specific damage taken by .% (Monsters and items)
         
     + NPCs
         ++ Smith - can upgrade/disassemble/repair/craft items
+            +++ Give quests - receive better 
             +++ Can upgrade
                 ++++ Level 1: TBD 
         ++ Healer - add hit points to character
             +++ Can upgrade infinitely:
                 ++++ Every level: recovers 20HP more
-                ++++ Cost: "amount of gold" * dungeon_level
+                ++++ Cost: "gold" * dungeon_level
         ++ Shopkeeper - will sell/buy items
             +++ Can upgrade
                 ++++ Level 1: TBD
     
     + Rework itemization
+        ++ New items type
+            +++ Usable
+                ++++ Tome of Training "<item>" - teaches Smith new weapon/armor type
         ++ Crafting
         ++ Enchanting
         ++ Disassembling

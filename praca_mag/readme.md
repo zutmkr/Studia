@@ -5,8 +5,9 @@
 ## (Pre-Alpha):
 ####    [TO DO]:
     + Code refactor
+        ++ Reuse code of "Dorothy's Dungeon 1"
         ++ TDD methology (Test Driven Development) - what should be tested?
-            +++ use Python 'unittest' library
+            +++ Use Python 'unittest' library
         ++ Code naming change (Pol -> Eng)
         ++ PEP8
         ++ Python ver. 3.6.2
@@ -17,17 +18,17 @@
         
     + Select framework
         ++ pygame 
-            +++ low level programming
+            +++ Low level programming
             +++ 2D graphic
-            +++ multiplayer = sockets, Twisted
-            +++ wast documentation
-            +++ old???
+            +++ Multiplayer = sockets, Twisted
+            +++ Wast documentation
+            +++ Old???
         ++ kivy
-            +++ high level programming
-            +++ capable for android
-            +++ easier Twisted for multiplayer
+            +++ High level programming
+            +++ Capable for android
+            +++ Easier Twisted for multiplayer
             +++ Xbox360 controller support
-            +++ better stock graphic
+            +++ Better stock graphic
             
     + Develop a network module
         ++ LAN Multiplayer
@@ -48,12 +49,14 @@
     + NPCs
         ++ Smith - can upgrade/disassemble/repair/craft items
             +++ Can upgrade
-                ++++ Level 1: 
+                ++++ Level 1: TBD 
         ++ Healer - add hit points to character
             +++ Can upgrade infinitely:
                 ++++ Every level: recovers 20HP more
                 ++++ Cost: "amount of gold" * dungeon_level
         ++ Shopkeeper - will sell/buy items
+            +++ Can upgrade
+                ++++ Level 1: TBD
     
     + Rework itemization
         ++ Crafting
@@ -63,13 +66,13 @@
         ++ Adding base items
             +++ Normal
             +++ Magic
-                ++++ enhance the player's damage/resist
+                ++++ Enhance the player's damage/resist
             +++ Rare
-                ++++ enhance the player's armor 
+                ++++ Enhance the player's armor 
             +++ Unique
-                ++++ speed up learning of a skill
+                ++++ Speed up learning of a skill
             +++ Legendary
-                ++++ can learn ultimate skills
+                ++++ Can learn ultimate skills
         ++ New attributes
             +++ Durability - numericall indycator on items. When durability go below 1,
                 the item will be destroyed and can no longer be used by character.
@@ -85,5 +88,8 @@
             +++ Passive - always active
             +++ Hybrid - cast instantly and delivers over time
         ++ Skills are learned from weapons, armors and accessories
-        
-    + Boss fights every 5 levels of dungeon
+    
+    + Gameplay    
+        ++ Boss fights every 5 levels of dungeon
+        ++ 2D (isometric?)
+        ++ ...

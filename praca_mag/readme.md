@@ -11,7 +11,14 @@
         ++ PEP8
         ++ Python ver. 3.6.2
     + Select framework
-        ++ pygame?
+        ++ pygame 
+            +++ low level programming
+            +++ 2D graphic
+            +++ multiplayer = sockets, Twisted
+        ++ kivy
+            +++ high level programming
+            +++ capable for android
+            +++ easier Twisted for multiplayer
     + Develop a network module
         ++ LAN Multiplayer
             +++ Co-op campaign

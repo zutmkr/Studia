@@ -50,7 +50,7 @@
         
     + NPCs
         ++ Smith - can upgrade/disassemble/repair/craft items
-            +++ Give quests - receive better 
+            +++ Give quest - receive random quality weapon/armor 
             +++ Can upgrade
                 ++++ Level 1: TBD 
         ++ Healer - add hit points to character

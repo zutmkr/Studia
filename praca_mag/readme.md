@@ -8,9 +8,11 @@
         ++ Reuse code of "Dorothy's Dungeon 1"
         ++ TDD methology (Test Driven Development) - what should be tested?
             +++ Use Python 'unittest' library
+            +++ Jenkins (?) for Continues Integration
         ++ Code naming change (Pol -> Eng)
         ++ PEP8
         ++ Python ver. 3.6.2
+        ++ Github
         
     + Add documentation
         ++ Game Design Document

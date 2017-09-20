@@ -56,7 +56,7 @@
         ++ Healer - add Hit Points to character
             +++ Can upgrade infinitely:
                 ++++ Every level: recovers 20HP more
-                ++++ Cost: "gold" * dungeon_level
+                ++++ Cost: <gold> * <dungeon_level>
         ++ Shopkeeper - will sell/buy items
             +++ Can upgrade
                 ++++ Level 1: TBD
@@ -64,7 +64,7 @@
     + Rework itemization
         ++ New items type
             +++ Usable
-                ++++ Tome of Training "<item>" - teaches Smith new weapon/armor type
+                ++++ Tome of Training <item> - teaches Smith new weapon/armor type
         ++ Crafting
         ++ Enchanting
         ++ Disassembling
@@ -82,6 +82,10 @@
         ++ New attributes
             +++ Durability - numericall indycator on items. When durability go below 1,
                 the item will be destroyed and can no longer be used by character.
+            +++ Item Level - determines base damage, skills and effects
+            +++ Damage - based on item level, strenght and item type
+            +++ <skill_name> [0/15AP] - shows the player how many AP points is needed
+                                        to learn the skill
                 
     + Skills can be used by player and monsters
         ++ Skill types

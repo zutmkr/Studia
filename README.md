@@ -1,2 +1,1 @@
-# Studia
-Moje programy różnej maści
+# Welcome to my Github!

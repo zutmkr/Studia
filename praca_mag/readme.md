@@ -106,6 +106,6 @@
         ++ Skills are learned from weapons, armors and accessories
     
     + Gameplay    
-        ++ Boss fights every 5 levels of dungeon
+        ++ Boss fights every 10 levels of dungeon
         ++ 2D (isometric?)
         ++ ...

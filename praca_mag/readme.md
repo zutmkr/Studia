@@ -94,9 +94,15 @@
             +++ Ice Element
             +++ Magic
         ++ Skill groups
-            +++ Active - cast instantly
-            +++ Passive - always active
-            +++ Hybrid - cast instantly and delivers over time
+            +++ Dungeon
+                ++++ Active - cast instantly
+                ++++ Passive - always active
+                ++++ Hybrid - cast instantly but active over time
+            +++ Battle
+                ++++ Offensive - deal damage
+                ++++ Defensive - reduce damage
+                ++++ Passive - always active
+                ++++ Hybrid - cast instantly but active over time
         ++ Skills are learned from weapons, armors and accessories
     
     + Gameplay    

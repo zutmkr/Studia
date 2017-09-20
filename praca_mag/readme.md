@@ -53,7 +53,7 @@
             +++ Give quest - receive random quality weapon/armor 
             +++ Can upgrade
                 ++++ Level 1: TBD 
-        ++ Healer - add hit points to character
+        ++ Healer - add Hit Points to character
             +++ Can upgrade infinitely:
                 ++++ Every level: recovers 20HP more
                 ++++ Cost: "gold" * dungeon_level

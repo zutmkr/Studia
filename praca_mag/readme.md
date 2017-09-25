@@ -10,8 +10,7 @@
   * Procedurally generated dungeons
   * Quests
   * Save game
-  * Dungeon editor (?)
-        
+  * Dungeon editor (?)   
 #### 2. Code refactor
   * Reuse code of "Dorothy's Dungeon 1"
   * TDD methology (Test Driven Development) - what should be tested?

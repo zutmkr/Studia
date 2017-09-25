@@ -5,15 +5,15 @@
 ## (Pre-Alpha):
 ####    [TO DO]:
     1. Gameplay and options    
-      1. Boss fights every 10 levels of dungeon
-      2. 2D (isometric?)
-      3. Procedurally generated dungeons
-      4. Quests
-      5. Save game
-      6. Dungeon editor (?)
-      7. ... 
+      * Boss fights every 10 levels of dungeon
+      * 2D (isometric?)
+      * Procedurally generated dungeons
+      * Quests
+      * Save game
+      * Dungeon editor (?)
+      * ... 
         
-    + Code refactor
+    2. Code refactor
         ++ Reuse code of "Dorothy's Dungeon 1"
         ++ TDD methology (Test Driven Development) - what should be tested?
             +++ Use Python 'unittest' library

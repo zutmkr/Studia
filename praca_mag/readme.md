@@ -54,8 +54,7 @@
 
     
 #### Player attributes
-  * __Hit Points__ - they define the amount of damage that a player can withstand 
-                     before he dies
+  * __Hit Points__ - they define the amount of damage that a player can withstand before he dies
   * __Strength__   - basic stat for damage calculation
   * __Damage__     - combination of Strength, item Damage and item type
   * __Armor__      - will reduce the amount of all damage taken by .% (Monsters and items)

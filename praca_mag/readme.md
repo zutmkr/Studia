@@ -113,11 +113,11 @@
     * Magic
   * Skill groups
     * Dungeon
-      * __Active__ - cast instantly
+      * __Active__  - cast instantly
       * __Passive__ - always active
-      * __Hybrid__ - cast instantly but active over time
+      * __Hybrid__  - cast instantly but active over time
     * Battle
       * __Offensive__ - deal damage
       * __Defensive__ - reduce damage
-      * __Passive__ - always active
-      * __Hybrid__ - cast instantly but active over time
+      * __Passive__   - always active
+      * __Hybrid__    - cast instantly but active over time

@@ -53,8 +53,11 @@
   * English
 
     
-#### New player attributes
-  * __Damage__ - combination of Strenght, item Damage and item type
+#### Player attributes
+  * __Hit Points__ - they define the amount of damage that a player can withstand 
+                     before he dies
+  * __Strength__ - basic stat for damage calculation
+  * __Damage__ - combination of Strength, item Damage and item type
   * __Armor__ - will reduce the amount of all damage taken by .% (Monsters and items)
   * __Resist__ - will reduce the amount of specific damage taken by .% (Monsters and items)
         
@@ -94,7 +97,8 @@
   * __Durability__ - numericall indycator on items. When durability go below 1, 
                      the item will be destroyed and can no longer be used by character
   * __Item Level__ - determines base damage, skills and effects
-  * __Damage__ - based on item level, strenght and item type
+  * __Damage__ - based on item level, strength and item type. Determines the amount 
+                 of damage inflicted by the item
   * __`<skill_name> [0/15AP]`__ - shows the player how many AP points is needed
                                   to learn the skill
                 

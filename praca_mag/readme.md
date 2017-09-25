@@ -11,6 +11,7 @@
   * Quests
   * Save game
   * Dungeon editor (?)
+
 #### 2. Code refactor
   * Reuse code of "Dorothy's Dungeon 1"
   * TDD methology (Test Driven Development) - what should be tested?
@@ -21,9 +22,9 @@
   * Python ver. 3.6.2
   * Github
         
-    + Documentation
-        ++ Game Design Document
-        ++ Test Strategy
+#### 3. Documentation
+  * Game Design Document
+  * Test Strategy
         
     + Framework
         ++ pygame 

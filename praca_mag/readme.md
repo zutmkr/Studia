@@ -71,46 +71,47 @@
     * Can upgrade
       * Level 1: __TBD__
     
-  * Rework itemization
-    * New items type
-      * Usable
-        * __Tome of Training__ `<item>` - teaches Smith new weapon/armor type
-    * Crafting
-    * Enchanting
-    * Disassembling
-    * Upgrading (item level)
-    * Adding base items
-      * Normal
-      * Magic
-        * Enhance the player's damage/resist
-      * Rare
-        * Enhance the player's armor 
-      * Unique
-        * Speed up learning of a skill
-      * Legendary
-        * Can learn ultimate skills
-  * New attributes
-    * __Durability__ - numericall indycator on items. When durability go below 1,
-                the item will be destroyed and can no longer be used by character.
-    * __Item Level__ - determines base damage, skills and effects
-    * __Damage__ - based on item level, strenght and item type
-    * __`<skill_name> [0/15AP]`__ - shows the player how many AP points is needed
+#### Rework itemization
+  * New items type
+    * Usable
+      * __Tome of Training__ `<item>` - teaches Smith new weapon/armor type
+  * Crafting
+  * Enchanting
+  * Disassembling
+  * Upgrading (item level)
+  * Adding base items
+    * Normal
+    * Magic
+      * Enhance the player's damage/resist
+    * Rare
+      * Enhance the player's armor 
+    * Unique
+      * Speed up learning of a skill
+    * Legendary
+      * Can learn ultimate skills
+      
+#### New attributes
+  * __Durability__ - numericall indycator on items. When durability go below 1, 
+the item will be destroyed and can no longer be used by character
+  * __Item Level__ - determines base damage, skills and effects
+  * __Damage__ - based on item level, strenght and item type
+  * __`<skill_name> [0/15AP]`__ - shows the player how many AP points is needed
                                         to learn the skill
                 
-    + Skills can be used by player and monsters
-        ++ Skill types
-            +++ Physicall
-            +++ Fire Element
-            +++ Ice Element
-            +++ Magic
-        ++ Skill groups
-            +++ Dungeon
-                ++++ Active - cast instantly
-                ++++ Passive - always active
-                ++++ Hybrid - cast instantly but active over time
-            +++ Battle
-                ++++ Offensive - deal damage
-                ++++ Defensive - reduce damage
-                ++++ Passive - always active
-                ++++ Hybrid - cast instantly but active over time
-        ++ Skills are learned from weapons, armors and accessories
+#### Skills can be used by player and monsters
+  * Skill types
+    * Physicall
+    * Fire Element
+    * Ice Element
+    * Magic
+  * Skill groups
+    * Dungeon
+      * __Active__ - cast instantly
+      * __Passive__ - always active
+      * __Hybrid__ - cast instantly but active over time
+    * Battle
+      * Offensive - deal damage
+      * Defensive - reduce damage
+      * Passive - always active
+      * Hybrid - cast instantly but active over time
+  * Skills are learned from weapons, armors and accessories

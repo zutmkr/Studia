@@ -26,27 +26,27 @@
   * Game Design Document
   * Test Strategy
         
-    + Framework
-        ++ pygame 
-            +++ Low level programming
-            +++ 2D graphic
-            +++ Multiplayer = sockets, Twisted
-            +++ Extensive documentation
-            +++ Old???
-        ++ kivy
-            +++ High level programming
-            +++ Capable for android
-            +++ Easier Twisted for multiplayer
-            +++ Xbox360 controller support
-            +++ Better stock graphic
+#### 4. Framework
+  * pygame 
+    * Low level programming
+    * 2D graphic
+    * Multiplayer = sockets, Twisted
+    * Extensive documentation
+    * Old???
+  * kivy
+    * High level programming
+    * Capable for android
+    * Easier Twisted for multiplayer
+    * Xbox360 controller support
+    * Better stock graphic
             
-    + Network module
-        ++ LAN Multiplayer
-            +++ Co-op campaign
-            +++ PvP
-        ++ Async movement?
-            +++ Turn based?
-            +++ Real time?
+#### #. Network module
+  * LAN Multiplayer
+    * Co-op campaign
+    * PvP
+  * Async movement?
+    * Turn based?
+    * Real time?
             
     + Translations (Pl, En, De) 
     

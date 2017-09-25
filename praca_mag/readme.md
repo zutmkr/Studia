@@ -112,7 +112,7 @@
       * __Passive__ - always active
       * __Hybrid__ - cast instantly but active over time
     * Battle
-      * Offensive - deal damage
-      * Defensive - reduce damage
-      * Passive - always active
-      * Hybrid - cast instantly but active over time
+      * __Offensive__ - deal damage
+      * __Defensive__ - reduce damage
+      * __Passive__ - always active
+      * __Hybrid__ - cast instantly but active over time

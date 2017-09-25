@@ -12,7 +12,7 @@
   * Save game
   * Dungeon editor (?)
 
-#### 1. Code refactor
+#### . Code refactor
   * Reuse code of "Dorothy's Dungeon 1"
   * TDD methology (Test Driven Development) - what should be tested?
     * Use Python 'unittest' library

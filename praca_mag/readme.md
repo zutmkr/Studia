@@ -4,6 +4,15 @@
 
 ## (Pre-Alpha):
 ####    [TO DO]:
+    1. Gameplay and options    
+      1. Boss fights every 10 levels of dungeon
+      2. 2D (isometric?)
+      3. Procedurally generated dungeons
+      4. Quests
+      5. Save game
+      6. Dungeon editor (?)
+      7. ... 
+        
     + Code refactor
         ++ Reuse code of "Dorothy's Dungeon 1"
         ++ TDD methology (Test Driven Development) - what should be tested?
@@ -14,16 +23,16 @@
         ++ Python ver. 3.6.2
         ++ Github
         
-    + Add documentation
+    + Documentation
         ++ Game Design Document
         ++ Test Strategy
         
-    + Select framework
+    + Framework
         ++ pygame 
             +++ Low level programming
             +++ 2D graphic
             +++ Multiplayer = sockets, Twisted
-            +++ Wast documentation
+            +++ Extensive documentation
             +++ Old???
         ++ kivy
             +++ High level programming
@@ -32,7 +41,7 @@
             +++ Xbox360 controller support
             +++ Better stock graphic
             
-    + Develop a network module
+    + Network module
         ++ LAN Multiplayer
             +++ Co-op campaign
             +++ PvP
@@ -41,7 +50,6 @@
             +++ Real time?
             
     + Translations (Pl, En, De) 
-        ++ Unlocking the LANGUAGE option 
     
     + New player attributes
         ++ Damage - combination of Strenght, item Damage and item type
@@ -104,8 +112,3 @@
                 ++++ Passive - always active
                 ++++ Hybrid - cast instantly but active over time
         ++ Skills are learned from weapons, armors and accessories
-    
-    + Gameplay    
-        ++ Boss fights every 10 levels of dungeon
-        ++ 2D (isometric?)
-        ++ ...

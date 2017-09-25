@@ -4,7 +4,7 @@
 
 # (Pre-Alpha):
 ###    [TO DO]:
-####1. Gameplay and options
+#### Gameplay and options
   * Boss fights every 10 levels of dungeon
   * 2D (isometric?)
   * Procedurally generated dungeons
@@ -12,7 +12,7 @@
   * Save game
   * Dungeon editor (?)
 
-####4. Code refactor
+#### Code refactor
   * Reuse code of "Dorothy's Dungeon 1"
   * TDD methology (Test Driven Development) - what should be tested?
     * Use Python 'unittest' library
@@ -22,11 +22,11 @@
   * Python ver. 3.6.2
   * Github
         
-#### 1. Documentation
+#### Documentation
   * Game Design Document
   * Test Strategy
         
-#### 1. Framework
+#### Framework
   * pygame 
     * Low level programming
     * 2D graphic
@@ -40,7 +40,7 @@
     * Xbox360 controller support
     * Better stock graphic
             
-#### 1. Network module
+#### Network module
   * LAN Multiplayer
     * Co-op campaign
     * PvP
@@ -48,25 +48,28 @@
     * Turn based?
     * Real time?
             
-    + Translations (Pl, En, De) 
+#### Translations
+  * Polish
+  * English
+
     
-    + New player attributes
-        ++ Damage - combination of Strenght, item Damage and item type
-        ++ Armor - will reduce the amount of all damage taken by .% (Monsters and items)
-        ++ Resist - will reduce the amount of specific damage taken by .% (Monsters and items)
+#### New player attributes
+  * __Damage__ - combination of Strenght, item Damage and item type
+  * __Armor__ - will reduce the amount of all damage taken by .% (Monsters and items)
+  * __Resist__ - will reduce the amount of specific damage taken by .% (Monsters and items)
         
-    + NPCs
-        ++ Smith - can upgrade/disassemble/repair/craft items
-            +++ Give quest - receive random quality weapon/armor 
-            +++ Can upgrade
-                ++++ Level 1: TBD 
-        ++ Healer - add Hit Points to character
-            +++ Can upgrade infinitely:
-                ++++ Every level: recovers 20HP more
-                ++++ Cost: <gold> * <dungeon_level>
-        ++ Shopkeeper - will sell/buy items
-            +++ Can upgrade
-                ++++ Level 1: TBD
+#### NPCs
+  * __Smith__ - can upgrade/disassemble/repair/craft items
+    * Give quest - receive random quality weapon/armor 
+    * Can upgrade
+      * Level 1: __TBD__ 
+  * Healer - add Hit Points to character
+    * Can upgrade infinitely:
+      * Every level: recovers 20HP more
+      * Cost: <gold> * <dungeon_level>
+  * Shopkeeper - will sell/buy items
+    * Can upgrade
+      * Level 1: **TBD**
     
     + Rework itemization
         ++ New items type

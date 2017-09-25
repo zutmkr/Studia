@@ -92,11 +92,11 @@
       
 #### New attributes
   * __Durability__ - numericall indycator on items. When durability go below 1, 
-the item will be destroyed and can no longer be used by character
+                     the item will be destroyed and can no longer be used by character
   * __Item Level__ - determines base damage, skills and effects
   * __Damage__ - based on item level, strenght and item type
   * __`<skill_name> [0/15AP]`__ - shows the player how many AP points is needed
-                                        to learn the skill
+                                  to learn the skill
                 
 #### Skills can be used by player and monsters
   * Skill types

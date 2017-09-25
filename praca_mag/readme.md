@@ -12,7 +12,7 @@
   * Save game
   * Dungeon editor (?)
 
-#### 2. Code refactor
+#### 1. Code refactor
   * Reuse code of "Dorothy's Dungeon 1"
   * TDD methology (Test Driven Development) - what should be tested?
     * Use Python 'unittest' library
@@ -22,11 +22,11 @@
   * Python ver. 3.6.2
   * Github
         
-#### 3. Documentation
+#### 1. Documentation
   * Game Design Document
   * Test Strategy
         
-#### 4. Framework
+#### 1. Framework
   * pygame 
     * Low level programming
     * 2D graphic
@@ -40,7 +40,7 @@
     * Xbox360 controller support
     * Better stock graphic
             
-#### #. Network module
+#### 1. Network module
   * LAN Multiplayer
     * Co-op campaign
     * PvP

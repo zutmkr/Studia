@@ -63,13 +63,13 @@
     * Give quest - receive random quality weapon/armor 
     * Can upgrade
       * Level 1: __TBD__ 
-  * Healer - add Hit Points to character
+  * __Healer__ - add Hit Points to character
     * Can upgrade infinitely:
       * Every level: recovers 20HP more
-      * Cost: <gold> * <dungeon_level>
-  * Shopkeeper - will sell/buy items
+      * Cost: <gold> \* <dungeon_level>
+  * __Shopkeeper__ - will sell/buy items
     * Can upgrade
-      * Level 1: **TBD**
+      * Level 1: __TBD__
     
     + Rework itemization
         ++ New items type

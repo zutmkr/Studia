@@ -66,7 +66,7 @@
   * __Healer__ - add Hit Points to character
     * Can upgrade infinitely:
       * Every level: recovers 20HP more
-      * Cost: '<gold> * <dungeon_level>'
+      * Cost: `<gold> * <dungeon_level>`
   * __Shopkeeper__ - will sell/buy items
     * Can upgrade
       * Level 1: __TBD__

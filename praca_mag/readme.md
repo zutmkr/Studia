@@ -98,7 +98,9 @@
   * __`<skill_name> [0/15AP]`__ - shows the player how many AP points is needed
                                   to learn the skill
                 
-#### Skills can be used by player and monsters
+#### Skills
+  * Can be used by player and monsters
+  * Skills are learned from weapons, armors and accessories
   * Skill types
     * Physicall
     * Fire Element
@@ -114,4 +116,3 @@
       * Defensive - reduce damage
       * Passive - always active
       * Hybrid - cast instantly but active over time
-  * Skills are learned from weapons, armors and accessories

@@ -5,12 +5,12 @@
 ## (Pre-Alpha):
 ####    [TO DO]:
 1. Gameplay and options    
-  * Boss fights every 10 levels of dungeon
-  * 2D (isometric?)
-  * Procedurally generated dungeons
-  * Quests
-  * Save game
-  * Dungeon editor (?)
+    * Boss fights every 10 levels of dungeon
+    * 2D (isometric?)
+    * Procedurally generated dungeons
+    * Quests
+    * Save game
+    * Dungeon editor (?)
         
     2. Code refactor
         ++ Reuse code of "Dorothy's Dungeon 1"

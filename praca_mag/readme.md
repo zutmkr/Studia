@@ -2,9 +2,9 @@
 ![Logo](https://github.com/zutmkr/Studia/blob/master/praca_mag/static/coollogo_com-7011398.png)
 
 
-## (Pre-Alpha):
-####    [TO DO]:
-##### 1. Gameplay and options    
+# (Pre-Alpha):
+###    [TO DO]:
+#### 1. Gameplay and options    
   * Boss fights every 10 levels of dungeon
   * 2D (isometric?)
   * Procedurally generated dungeons
@@ -12,15 +12,15 @@
   * Save game
   * Dungeon editor (?)
         
-    2. Code refactor
-        ++ Reuse code of "Dorothy's Dungeon 1"
-        ++ TDD methology (Test Driven Development) - what should be tested?
-            +++ Use Python 'unittest' library
-            +++ Jenkins (?) for Continues Integration
-        ++ Code naming change (Pol -> Eng)
-        ++ PEP8
-        ++ Python ver. 3.6.2
-        ++ Github
+#### 2. Code refactor
+  * Reuse code of "Dorothy's Dungeon 1"
+  * TDD methology (Test Driven Development) - what should be tested?
+    * Use Python 'unittest' library
+    * Jenkins (?) for Continues Integration
+  * Code naming change (Pol -> Eng)
+  * PEP8
+  * Python ver. 3.6.2
+  * Github
         
     + Documentation
         ++ Game Design Document

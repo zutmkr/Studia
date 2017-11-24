@@ -9,3 +9,18 @@
          Xavier    2              32
          Barbar    1              9
          Sanders   2              31
+         Epic      1              5
+         Conan     1              12
+         Conan     1              13
+         Conan     1              10
+         Stepien   1              7
+         Kruhol    5              2
+         ¯ak       1              8
+         ¯ak       1              14
+         ¯ak       1              14
+         Kazia     1              14
+         LOL       1              7
+         Mati      1              9
+         Mateo     1              16
+         mateo     1              15
+         cebuyla   2              17

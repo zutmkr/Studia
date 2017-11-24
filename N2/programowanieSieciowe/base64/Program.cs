@@ -37,23 +37,11 @@ namespace Csharp
     {
         var sw = new StreamWriter(ms);
         sw.WriteLine("Hello World");
-        // The string is currently stored in the 
-        // StreamWriters buffer. Flushing the stream will 
-        // force the string into the MemoryStream.
+
         sw.Flush();
 
         var myStr = GetCipherText(ms);
 
-        // If we dispose the StreamWriter now, it will close 
-        // the BaseStream (which is our MemoryStream) which 
-        // will prevent us from reading from our MemoryStream
-        //DON'T DO THIS - sw.Dispose();
-
-        // The StreamReader will read from the current 
-        // position of the MemoryStream which is currently 
-        // set at the end of the string we just wrote to it. 
-        // We need to set the position to 0 in order to read 
-        // from the beginning.
         ms.Position = 0;
         var sr = new StreamReader(ms);
         //var myStr = sr.ReadToEnd();

@@ -37,7 +37,6 @@ namespace search
                 if (line.Contains("Project("))
                 {
                     temp = line.Split();
-
                 }
             }
             foreach (string x in temp)
@@ -57,10 +56,17 @@ namespace search
             {
                 to_copy.Add(Path.GetDirectoryName(to_copy[1]) + "\\" + elemList[i].Attributes["Include"].Value);
             }
+            var root_folder = doc.SelectSingleNode("/Project/PropertyGroup/RootNamespace").Value;
+
+
+            System.Diagnostics.Debug.Print(root_folder);
             DirectoryInfo di = Directory.CreateDirectory(copy_dest);
+
+            File.Copy(to_copy[0], copy_dest + Path.GetFileName(to_copy[0]));
+            File.Copy(to_copy[1], copy_dest + Path.GetFileName(to_copy[1]));
             foreach (string x in to_copy)
             {
-                File.Copy(x, copy_dest + Path.GetFileName(x));
+                File.Copy(x + 2, copy_dest + Path.GetFileName(x));
             }
 
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
 
@@ -8,12 +9,44 @@ namespace search
     {
 
         string choosen_path;
+        List<string> to_copy = new List<string>();
+
 
         public void Search_for_files()
         {
-            var allFiles = Directory.GetFiles(choosen_path, "*.sln", SearchOption.AllDirectories);
+            var sln_file = Directory.GetFiles(choosen_path, "*.sln", SearchOption.AllDirectories);
+            if (sln_file.Length == 0)
+            {
+                MessageBox.Show("[ERROR]\n\t*.sln file not found.\n\tPlease select diffrent folder.");
+                return;
+            }
+            else if (sln_file.Length > 1)
+            {
+                MessageBox.Show("[ERROR]\n\tFound multiple *.sln files.\n\tPlease select diffrent folder.");
+                return;
+            }
 
-            System.Diagnostics.Debug.Print(allFiles.Length.ToString());
+            to_copy.Add(sln_file[0]);
+
+            string[] temp = new String[0];
+            foreach (string line in File.ReadAllLines(to_copy[0]))
+            {
+                if (line.Contains("Project("))
+                {
+                    temp = line.Split();
+
+                }
+            }
+            foreach (string x in temp)
+            {
+                if (x.EndsWith(".csproj\","))
+                {
+                    to_copy.Add(Path.GetDirectoryName(to_copy[0]) + x);
+                    to_copy[1] = to_copy[1].Replace("\"", "\\").Substring(0, to_copy[1].Length - 2);
+                }
+            }
+
+            //System.Diagnostics.Debug.Print(to_copy[1]);
         }
 
 

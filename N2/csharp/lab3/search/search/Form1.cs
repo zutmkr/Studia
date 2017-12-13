@@ -3,14 +3,15 @@ using System.Xml;
 using System.Collections.Generic;
 using System.IO;
 using System.Windows.Forms;
+using System.IO.Compression;
 
 namespace search
 {
     public partial class Form1 : Form
     {
 
-        string choosen_path;
-        string copy_dest;
+        static string choosen_path;
+        static string copy_dest;
         List<string> to_copy = new List<string>();
 
 
@@ -56,21 +57,33 @@ namespace search
             {
                 to_copy.Add(Path.GetDirectoryName(to_copy[1]) + "\\" + elemList[i].Attributes["Include"].Value);
             }
-            var root_folder = doc.SelectSingleNode("/Project/PropertyGroup/RootNamespace").Value;
+            var root_folder = Path.GetFileNameWithoutExtension(to_copy[0]);
 
+            
+            //System.Diagnostics.Debug.Print(root_folder);
 
-            System.Diagnostics.Debug.Print(root_folder);
-            DirectoryInfo di = Directory.CreateDirectory(copy_dest);
+            Directory.CreateDirectory(copy_dest);
+            Directory.CreateDirectory(copy_dest + root_folder);
+            Directory.CreateDirectory(copy_dest + root_folder + "\\Properties");
 
-            File.Copy(to_copy[0], copy_dest + Path.GetFileName(to_copy[0]));
-            File.Copy(to_copy[1], copy_dest + Path.GetFileName(to_copy[1]));
+            File.Copy(to_copy[0], copy_dest + Path.GetFileName(to_copy[0]), true);
+            File.Copy(to_copy[1], copy_dest + "\\" + root_folder + "\\" + Path.GetFileName(to_copy[1]), true);
             foreach (string x in to_copy)
             {
-                File.Copy(x + 2, copy_dest + Path.GetFileName(x));
+                if (x.Contains(".sln") || x.Contains(".csproj"))
+                    continue;
+
+                if (x.Contains("Properties"))
+                    File.Copy(x, copy_dest + "\\" + root_folder + "\\Properties\\" + Path.GetFileName(x), true);
+                else
+                    File.Copy(x, copy_dest + "\\" + root_folder + "\\" + Path.GetFileName(x), true);
             }
+           
+            ZipFile.CreateFromDirectory(copy_dest, Directory.GetParent(copy_dest).FullName + @"_kopia.zip", CompressionLevel.Fastest, true);
+            
 
         }
-
+        
 
         public Form1()
         {

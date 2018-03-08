@@ -5,13 +5,13 @@
                                  |   |  /|
   .------------------------------------' |
  /  .-.             (Handlarz)           |
-|  /   \    Od teraz na mapie mo¿esz     |
-| |\_.  |   spotkaæ Je¿dzca.             |
+|  /   \    Od teraz na mapie moÅ¼esz     |
+| |\_.  |   spotkaÄ‡ JeÅºdzca.             |
 |\|  | /|                                |
 | `---' |   Zniszcz go, a otrzymasz      |
-|       |            NAGRODÊ             |
+|       |            NAGRODÄ˜             |
 |       |                                |
-|       |    Zniszczony Je¿dziec (1/1)  /
+|       |    Zniszczony JeÅºdziec (1/1)  /
 |       |------------------------------'
 \       |
  \     /

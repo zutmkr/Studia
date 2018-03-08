@@ -22,9 +22,9 @@ def menu_glowne():
     do = 5  
     
     os.system('cls')  # czyszczenie ekranu
-    rysuj_logo()
+    rysuj("static/LOGO.txt")
     rysuj("lang/PL/menu_glowne_instrukcje.txt")
-    rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+    rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
     
     
     while True:
@@ -34,16 +34,16 @@ def menu_glowne():
             od -= 6
             do -= 6
             os.system('cls')  # czyszczenie ekranu
-            rysuj_logo()
+            rysuj("static/LOGO.txt")
             rysuj("lang/PL/menu_glowne_instrukcje.txt")
-            rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+            rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
         elif inp == 's' and od >= 0 and do < 23:
             od += 6
             do += 6
             os.system('cls')  # czyszczenie ekranu
-            rysuj_logo()
+            rysuj("static/LOGO.txt")
             rysuj("lang/PL/menu_glowne_instrukcje.txt")
-            rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+            rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
         elif inp == 'k':
             if od >=0 and do <=6:
                 nowa_gra()
@@ -113,9 +113,9 @@ def extra():
     do = 28  
     
     os.system('cls')  # czyszczenie ekranu
-    rysuj_logo()
+    rysuj("static/LOGO.txt")
     rysuj("lang/PL/menu_glowne_instrukcje.txt")
-    rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+    rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
     
     
     while True:
@@ -125,16 +125,16 @@ def extra():
             od -= 5
             do -= 5
             os.system('cls')  # czyszczenie ekranu
-            rysuj_logo()
+            rysuj("static/LOGO.txt")
             rysuj("lang/PL/menu_glowne_instrukcje.txt")
-            rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+            rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
         elif inp == 's' and od >= 24 and do < 37:
             od += 5
             do += 5
             os.system('cls')  # czyszczenie ekranu
-            rysuj_logo()
+            rysuj("static/LOGO.txt")
             rysuj("lang/PL/menu_glowne_instrukcje.txt")
-            rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+            rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
         elif inp == 'k':
             if od >=24 and do <=28:
                 generator_map.generator()
@@ -147,9 +147,9 @@ def opcje():
     do = 43  
     
     os.system('cls')  # czyszczenie ekranu
-    rysuj_logo()
+    rysuj("static/LOGO.txt")
     rysuj("lang/PL/menu_glowne_instrukcje.txt")
-    rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+    rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
     
     
     while True:
@@ -159,16 +159,16 @@ def opcje():
             od -= 5
             do -= 5
             os.system('cls')  # czyszczenie ekranu
-            rysuj_logo()
+            rysuj("static/LOGO.txt")
             rysuj("lang/PL/menu_glowne_instrukcje.txt")
-            rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+            rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
         elif inp == 's' and od >= 39 and do < 52:
             od += 5
             do += 5
             os.system('cls')  # czyszczenie ekranu
-            rysuj_logo()
+            rysuj("static/LOGO.txt")
             rysuj("lang/PL/menu_glowne_instrukcje.txt")
-            rysuj_gl_menu("lang/PL/menu_glowne.txt",od,do)
+            rysuj_oddo("lang/PL/menu_glowne.txt",od,do)
         elif inp == 'k':
             if od >=39 and do <=43:
                 getch()

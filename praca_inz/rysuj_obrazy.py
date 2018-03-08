@@ -10,52 +10,32 @@ logger=logging.getLogger(__name__)
 
 
 def rysuj_animacja_ciag(adres, s):
-    fp = open(adres, encoding="utf8")
-    for i, line in enumerate(fp):
-        print(line, end='')
-        sleep(s)
-    fp.close()
-    
-    
-def rysuj_score():
     try:
-        with open("score/high_score.txt", encoding="utf8") as plik:
-            print(plik.read())
+        fp = open(adres, encoding="utf8")
+        for i, line in enumerate(fp):
+            print(line, end='')
+            sleep(s)
     except Exception as e:
-        logger.error(e)
-    plik.close()
-    
-
-def rysuj_logo():
-    with open("static/LOGO.txt", encoding="utf8") as plik:
-        print(plik.read())
-    plik.close()
-        
-        
-def rysuj_potwora(adres):
-    with open(adres, encoding="utf8") as plik:
-        print(plik.read())
-    plik.close()
-    
+        logger.error(e)             
+    fp.close()
+      
     
 def rysuj(adres):
-    with open(adres, encoding="utf8") as plik:
-        print(plik.read())        
+    try:
+        with open(adres, encoding="utf8") as plik:
+            print(plik.read())   
+    except Exception as e:
+        logger.error(e)        
     plik.close()    
         
         
-def rysuj_gl_menu(adres,od,do):
-    with open(adres, encoding="utf8") as plik:
-        lines = islice(plik, od, do)
-        for line in lines:
-            print(line)
-    plik.close()
-    
-    
-def rysuj_zadanie(adres,od,do):
-    with open(adres, encoding="utf8") as plik:
-        lines = islice(plik, od, do)
-        for line in lines:
-            print(line)   
-    plik.close()    
+def rysuj_oddo(adres,od,do):
+    try:
+        with open(adres, encoding="utf8") as plik:
+            lines = islice(plik, od, do)
+            for line in lines:
+                print(line)
+    except Exception as e:
+        logger.error(e)             
+    plik.close() 
     

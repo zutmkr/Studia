@@ -40,22 +40,22 @@ class Gracz:
     
     def pokaz_zadania(self):
         if self.zadania[3] == 1 and self.zadania[4] == 1 and self.zadania[5] == 0:
-            with open('quests/zadH1.txt') as plik:
+            with open('quests/zadH1.txt', encoding="utf8") as plik:
                 print(plik.read())
         elif self.zadania[3] == 1 and self.zadania[4] == 1 and self.zadania[5] == 1:
-            with open('quests/zadH11.txt') as plik:
+            with open('quests/zadH11.txt', encoding="utf8") as plik:
                 print(plik.read())
         elif self.zadania[3] == 1 and self.zadania[4] == 0 and gargulce == 0:
-            with open('quests/zadH2.txt') as plik:
+            with open('quests/zadH2.txt', encoding="utf8") as plik:
                 print(plik.read())
         elif self.zadania[3] == 1 and self.zadania[4] == 0 and gargulce == 1:
-            with open('quests/zadH21.txt') as plik:
+            with open('quests/zadH21.txt', encoding="utf8") as plik:
                 print(plik.read())
         elif self.zadania[3] == 1 and self.zadania[4] == 0 and gargulce > 1:
-            with open('quests/zadH22.txt') as plik:
+            with open('quests/zadH22.txt', encoding="utf8") as plik:
                 print(plik.read())
         else:
-            with open('quests/brak.txt') as plik:
+            with open('quests/brak.txt', encoding="utf8") as plik:
                 print(plik.read())
 
     def pokaz_plecak(self):
@@ -176,7 +176,7 @@ class Gracz:
                     for Przedmiot in self.lista:
                         if not Przedmiot.nazwa.find('-> '):
                             if kto.zloto < Przedmiot.wartosc:
-                                print("Nie stać mnie na to, mam za mało ZLOTA!")
+                                print("Nie stać mnie na to, mam za mało ZŁOTA!")
                                 getch()
                                 break
                             Przedmiot.nazwa = Przedmiot.nazwa.lstrip('-> ')
@@ -191,7 +191,7 @@ class Gracz:
                     for Przedmiot in self.lista:
                         if not Przedmiot.nazwa.find('-> '):
                             if kto.zloto < Przedmiot.wartosc:
-                                print("Handlarz nie ma tyle ZLOTA, by to kupić!")
+                                print("Handlarz nie ma tyle ZŁOTA, by to kupić!")
                                 getch()
                                 break
                             Przedmiot.nazwa = Przedmiot.nazwa.lstrip('-> ')
@@ -213,7 +213,7 @@ class Gracz:
             rysuj_obrazy.rysuj("static/" + self.imie + ".txt")  
             od = 1
             do = 3
-            rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",od,do)
+            rysuj_obrazy.rysuj_oddo("quests/" + self.imie + ".txt",od,do)
             print('\tt - TAK\tn - NIE')
             inp = input()
             #inp = getch().decode("utf-8")
@@ -222,13 +222,13 @@ class Gracz:
                     gr.zadania[0] = 1
                     r = random.choice([True, False])
                     if r:   #PIERWSZE ZADANIE
-                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",5,7)
+                        rysuj_obrazy.rysuj_oddo("quests/" + self.imie + ".txt",5,7)
                         gr.zadania[1] = 1
                         getch()
                         print('(' + gr.imie + '): Będzie zrobione!')
                         getch()
                     else:   #DRUGIE ZADANIE
-                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",17,19)
+                        rysuj_obrazy.rysuj_oddo("quests/" + self.imie + ".txt",17,19)
                         gr.zadania[1] = 0
                         getch()
                         print('(' + gr.imie + '): Będzie zrobione!')
@@ -237,13 +237,13 @@ class Gracz:
                     gr.zadania[3] = 1
                     r = random.choice([True, False])
                     if r:   #PIERWSZE ZADANIE
-                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",5,8)
+                        rysuj_obrazy.rysuj_oddo("quests/" + self.imie + ".txt",5,8)
                         gr.zadania[4] = 1
                         getch()
                         print('(' + gr.imie + '): Będzie zrobione!')
                         getch()
                     else:   #DRUGIE ZADANIE
-                        rysuj_obrazy.rysuj_zadanie("quests/" + self.imie + ".txt",22,24)
+                        rysuj_obrazy.rysuj_oddo("quests/" + self.imie + ".txt",22,24)
                         gr.zadania[4] = 0
                         getch()
                         print('(' + gr.imie + '): Będzie zrobione!')
@@ -263,7 +263,7 @@ class Potwor(Gracz):
 
     def walka_gui(self, status, gr):
         os.system('cls')
-        rysuj_obrazy.rysuj_potwora('static/' + self.imie + '.txt')
+        rysuj_obrazy.rysuj('static/' + self.imie + '.txt')
         print('Musisz walczyć z ', self.imie, ' ', self.pz, '/', self.pmax, 'PŻ')
         print('\t\t\t\t\t\tDOZWOLONE AKCJE')
         print('\t\t\t\t\t\t\tf - Atak bronią')
@@ -276,7 +276,7 @@ class Uzdrowiciel(Gracz):
     def __init__(self, gr):
         self.imie = 'uzdr'
         os.system('cls')  # czyszczenie ekranu
-        rysuj_obrazy.rysuj_potwora('static/uzdr.txt')
+        rysuj_obrazy.rysuj('static/uzdr.txt')
         ile_pkt = 3 * 1.5 * podziemia.poziom_p
         print('Spotykasz Uzdrowiciela!!!')
         print('Otrzymujesz', int(ile_pkt), 'dodatkowych PUNKTÓW ŻYCIA')

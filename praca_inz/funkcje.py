@@ -46,7 +46,7 @@ def handel(gr,ha):
     
     while wyb != '0':
         os.system('cls')  # czyszczenie ekranu
-        rysuj_obrazy.rysuj_potwora('static/handl.txt')
+        rysuj_obrazy.rysuj('static/handl.txt')
         print('\t\tSpotykasz Handlarza!!!\n')
         print('>W czym mogę pomóc?\n\t\t\t Handlarz posiada ', ha.zloto, ' sztuk złota\n')
         print('\t1) Pokaż mi swoje towary. (kupuj)')
@@ -290,7 +290,7 @@ def rozpocznij_walke(gr):
             print('ZOSTAŁES ZGŁADZONY.')
             getch()
             
-            dlugosc_poziom = ((9 + len(gr.imie)) -19) * -1
+            dlugosc_poziom = ((9 + len(gr.imie)) - 19) * (-1)       #magic numbers...
             dlugosc_punkty = 33 - 9 - len(gr.imie) - dlugosc_poziom
             
             
@@ -299,7 +299,7 @@ def rozpocznij_walke(gr):
             rysuj_obrazy.rysuj_animacja_ciag('animated/gameover/gameover.txt', 0.035)
             f.close()
             
-            rysuj_obrazy.rysuj_score()
+            rysuj_obrazy.rysuj("score/high_score.txt")
             print('\n\n\t\tRozpocznij nową grę?')
             print('\t\t1. Nowa gra\t2.Główne menu \t3. Zakończ grę')
             while True:

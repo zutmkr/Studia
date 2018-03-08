@@ -1,32 +1,32 @@
 [ZADANIE NR 1]
-Widzê, ¿e jesteœ POTÊ¯NYM i WIELKIM wojownikiem.
-Mo¿e poœwiêci³ byœ chwilê i wykona³ dla mnie pewne zadanie?
+WidzÄ™, Å¼e jesteÅ› POTÄ˜Å»NYM i WIELKIM wojownikiem.
+MoÅ¼e poÅ›wiÄ™ciÅ‚ byÅ› chwilÄ™ i wykonaÅ‚ dla mnie pewne zadanie?
 
 [TAK]:
-    Grasuje tu pewny smoczy jeŸdziec i okrada mnie z 
-    towarów. Ubij go dla mnie, a obdarujê Ciê
-    wy¹tkowym przedmiotem!
+    Grasuje tu pewny smoczy jeÅºdziec i okrada mnie z 
+    towarÃ³w. Ubij go dla mnie, a obdarujÄ™ CiÄ™
+    wyjÄ…tkowym przedmiotem!
     
 [NIE]:
-    Ciê¿ko dziœ o dobr¹ pomoc...
+    CiÄ™Å¼ko dziÅ› o dobrÄ… pomoc...
     
 [PO WYKONANIU]:
-    Teraz moja czêœæ umowy.
+    Teraz moja czÄ™Å›Ä‡ umowy.
     Oto Twoja nagroda..
     
 ////////////////////////////////////////////////////////////////////
 [ZADANIE NR 2]
-Widzê, ¿e jesteœ POTÊ¯NYM i WIELKIM wojownikiem.
-Mo¿e poœwiêci³ byœ chwilê i wykona³ dla mnie pewn¹ przys³ugê?
+WidzÄ™, Å¼e jesteÅ› POTÄ˜Å»NYM i WIELKIM wojownikiem.
+MoÅ¼e poÅ›wiÄ™ciÅ‚ byÅ› chwilÄ™ i wykonaÅ‚ dla mnie pewnÄ… przysÅ‚ugÄ™
 
 [TAK]:
-    Potrzebujê kamiennego proszku. Dwa gargulce powinnny
-    za³atwiæ sprawê.
+    PotrzebujÄ™ kamiennego proszku. Dwa gargulce powinnny
+    zaÅ‚atwiÄ‡ sprawÄ™.
     
 [NIE]:
     ...
     
     
 [PO WYKONANIU]:
-    O jesteœ i widzê, ¿e masz przy sobie to o co prosi³em.
-    Zapamiêtam sobie Twoje czyny. Dziêki wojowniku.
+    O jesteÅ› i widzÄ™, Å¼e masz przy sobie to, o co prosiÅ‚em.
+    ZapamiÄ™tam sobie Twoje czyny. DziÄ™ki wojowniku.

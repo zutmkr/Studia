@@ -8,7 +8,7 @@
 |  /   \                                 |
 | |\_.  |                                |
 |\|  | /|                                |
-| `---' |  ->  BRAK AKTYWNYCH ZADAÑ  <-  |
+| `---' |  ->  BRAK AKTYWNYCH ZADAÅƒ  <-  |
 |       |                                |
 |       |                                |
 |       |                               /

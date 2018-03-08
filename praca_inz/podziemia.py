@@ -168,7 +168,7 @@ class Mapa():
         global poziom_p
         global ile_map
         os.system('cls')  # czyszczenie ekranu
-        rysuj_obrazy.rysuj_logo()
+        rysuj_obrazy.rysuj("static/LOGO.txt")
         print('\t\t\tPOZIOM PODZIEMIA: ', poziom_p, '\n')
 
         for i in range(len(self.mapa[0])):

@@ -1,32 +1,32 @@
 [ZADANIE NR 1]
-Widzê, ¿e jesteœ POTÊ¯NYM i WIELKIM wojownikiem.
-Mo¿e poœwiêci³ byœ chwilê i wykona³ dla mnie pewne zadanie?
+WWidzÄ™, Å¼e jesteÅ› POTÄ˜Å»NYM i WIELKIM wojownikiem.
+MoÅ¼e poÅ›wiÄ™ciÅ‚ byÅ› chwilÄ™ i wykonaÅ‚ dla mnie pewne zadanie?
 
 [TAK]:
-    Przynieœ mi piêæ legendarnym przedmiotów, a obdarujê
-    Ciê wiêksz¹ iloœci¹ PUNKTÓW ¯YCIA.
+    PrzynieÅ› mi piÄ™Ä‡ legendarnym przedmiotÃ³w, a obdarujÄ™
+    CiÄ™ wiÄ™kszÄ… iloÅ›ciÄ… PUNKTÃ“W Å»YCIA.
     
 [NIE]:
     Trudno...
-    Uwa¿aj na siebie wojowniku. Do zobaczenia.
+    UwaÅ¼aj na siebie wojowniku. Do zobaczenia.
     
 [PO WYKONANIU]:
-    O widzê, ¿e znalaz³eœ piêæ legendarnych przedmiotów.
+    O widzÄ™, Å¼e znalazÅ‚eÅ› piÄ™Ä‡ legendarnych przedmiotÃ³w.
     Oto Twoja nagroda.
     
 ////////////////////////////////////////////////////////////////////
 [ZADANIE NR 2]
-Widzê, ¿e jesteœ POTÊ¯NYM i WIELKIM wojownikiem.
-Co powiesz na ma³y uk³ad?
+WidzÄ™, Å¼e jesteÅ› POTÄ˜Å»NYM i WIELKIM wojownikiem.
+Co powiesz na maÅ‚y ukÅ‚ad?
 
 [TAK]:
-    Ponoæ w tych lochach mo¿na spotkaæ magiczne stworzenia
-    zg³adŸ trzy z nich, a bêdê posiada³ wiêksz¹ moc uzdrawiania.
+    PonoÄ‡ w tych lochach moÅ¼na spotkaÄ‡ magiczne stworzenia
+    zgÅ‚adÅº trzy z nich, a bÄ™dÄ™ posiadaÅ‚ wiÄ™kszÄ… moc uzdrawiania.
     
 [NIE]:
-    Do nastêpnego spotkania wiêc...
+    Do nastÄ™pnego spotkania wiÄ™c...
     
     
 [PO WYKONANIU]:
-    Œwietnie.
-    Od teraz bêdê potê¿niejszy.
+    Åšwietnie.
+    Od teraz bÄ™dÄ™ potÄ™Å¼niejszy.

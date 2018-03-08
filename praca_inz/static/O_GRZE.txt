@@ -14,9 +14,9 @@
             PUNKTY ŻYCIA - Określają ile obrażeń jest w stanie znieść 
                            nasza postać. Zmniejszenie tej cechy do zera 
                            kończy grę, ekranem GAME OVER.
-        Wraz z poziomiem rośnie siła i życie potworów, ale także wartość nagród za zadania.
+        Wraz z poziomem podziemia rośnie siła i życie potworów, ale także wartość nagród za zadania.
     [JAK PRZEŻYĆ?]
-        Na drodze gracza pojawiają się (oprócz przeciweników) postacie niezależne.
+        Na drodze gracza pojawiają się (oprócz przeciwników) postacie niezależne.
             Handlarz    - Kupno oraz sprzedaż przedmiotów. Czasami zleci 
                           zadanie do wykonania.
             Uzdrowiciel - Zwiększa naszą pulę PUNKTÓW ŻYCIA.
@@ -27,9 +27,9 @@
             1. Dojście na jak najwyższy poziom podziemia.
             2. Zebranie jak największej ilości punktów (punkty są przydzielane za: wygrywanie walk,
             wypełnianie zadań oraz zgromadzone legendarne przedmioty, a odbierane za przedmioty 
-            niskiej(zwykłe, zepsute, zardzewiałe, przeklęte) jakości.
+            niskiej (zwykłe, zepsute, zardzewiałe, przeklęte) jakości.
     [O AUTORZE]
-        Gra wraz z edytorem została stworzona jako element pracy dyplomowej(inżynierskiej) na 
+        Gra wraz z edytorem została stworzona jako element pracy dyplomowej (inżynierskiej) na 
         Wydziale Informatyki Zachodniopomorskiego Uniwersytetu Technologicznego w Szczecinie. 
         
         Autor: Mateusz Krusiński                                        Szczecin, 09.06.2017

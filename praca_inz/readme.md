@@ -2,7 +2,7 @@
 ![Logo](https://github.com/zutmkr/Studia/blob/master/praca_inz/static/logo.PNG)
 
 NOTE! This project is discontinued... but the sequel is [here.](https://github.com/zutmkr/Studia/tree/master/praca_mag "Dorothy's Dungeon 2")
-# (Beta v0.2.1):
+# (Beta v0.2.1.180308):
 ### *[CODE + HOTFIX]*:
         + naprawiono błąd uniemożliwiający uruchomienie gry (brakujący plik)
         + poprawiono niektóre teksty w grze

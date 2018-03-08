@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import logging
 from time import sleep
 from itertools import islice
@@ -9,7 +10,7 @@ logger=logging.getLogger(__name__)
 
 
 def rysuj_animacja_ciag(adres, s):
-    fp = open(adres)
+    fp = open(adres, encoding="utf8")
     for i, line in enumerate(fp):
         print(line, end='')
         sleep(s)
@@ -26,13 +27,13 @@ def rysuj_score():
     
 
 def rysuj_logo():
-    with open("static/LOGO.txt") as plik:
+    with open("static/LOGO.txt", encoding="utf8") as plik:
         print(plik.read())
     plik.close()
         
         
 def rysuj_potwora(adres):
-    with open(adres) as plik:
+    with open(adres, encoding="utf8") as plik:
         print(plik.read())
     plik.close()
     
@@ -44,7 +45,7 @@ def rysuj(adres):
         
         
 def rysuj_gl_menu(adres,od,do):
-    with open(adres) as plik:
+    with open(adres, encoding="utf8") as plik:
         lines = islice(plik, od, do)
         for line in lines:
             print(line)
@@ -52,7 +53,7 @@ def rysuj_gl_menu(adres,od,do):
     
     
 def rysuj_zadanie(adres,od,do):
-    with open(adres) as plik:
+    with open(adres, encoding="utf8") as plik:
         lines = islice(plik, od, do)
         for line in lines:
             print(line)   

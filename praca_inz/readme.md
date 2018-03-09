@@ -1,7 +1,7 @@
 
 ![Logo](https://github.com/zutmkr/Studia/blob/master/praca_inz/static/logo.PNG)
 
-NOTE! This project is discontinued... but the sequel is [here.](https://github.com/zutmkr/Studia/tree/master/praca_mag "Dorothy's Dungeon 2")
+NOTE! This code is final... development has moved [here.](https://github.com/zutmkr/Studia/tree/master/praca_mag "Dorothy's Dungeon 2")
 # (Beta v0.2.1.180308):
 ### [CODE + HOTFIX]:
         + naprawiono błąd uniemożliwiający uruchomienie gry (brakujący plik)
@@ -117,7 +117,7 @@ NOTE! This project is discontinued... but the sequel is [here.](https://github.c
         + poprawiono wyświetlanie wartości życia potworów (maxPZ)
         + dodano skalowanie życia potwora w zależności od poziomu lochu
         + oprogramowano opcje ucieczki z walki (20% szans)
-        + można wyjść z gry znakiem ''' w widoku 'mapy'
+        + można wyjść z gry znakiem "`" w widoku 'mapy'
 
 # (Alpha v0.08):
         + gra kończy się dopiero z śmiercią gracza (infinite dyngeons, yay!)

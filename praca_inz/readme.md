@@ -3,7 +3,7 @@
 
 NOTE! This project is discontinued... but the sequel is [here.](https://github.com/zutmkr/Studia/tree/master/praca_mag "Dorothy's Dungeon 2")
 # (Beta v0.2.1.180308):
-### *[CODE + HOTFIX]*:
+### [CODE + HOTFIX]:
         + naprawiono błąd uniemożliwiający uruchomienie gry (brakujący plik)
         + poprawiono niektóre teksty w grze
         + poprawiono metody odpowiedzialne za rysowanie obrazów
@@ -63,8 +63,7 @@ NOTE! This project is discontinued... but the sequel is [here.](https://github.c
         + zoptymalizować metodę Gracz.handel()
         + uzdrowiciel skaluje się z poziomem lochu
         + obrażenia zadawane przez potwory skalują się z poziomem lochu
-        + naprawiono resetowanie się poziomu lochu po rozpoczęciu
-nowej gry przez gracza, z poziomu ekranu game over
+        + naprawiono resetowanie się poziomu lochu po rozpoczęciu nowej gry przez gracza, z poziomu ekranu game over
         + usunięto znacznik kowala i handlarza z widoku mapy
          ++ hotfix(usunąłem przez przypadek tez info o plecaku i postaci..)
         + dodać statystyki do przedmiotów
@@ -94,7 +93,7 @@ nowej gry przez gracza, z poziomu ekranu game over
         + dodano opis i znak kowala do interfejsu gracza (nie oprogramowano jeszcze ulepszania przedmiotów)
         + dodano znacznik zejścia poziom niżej w podziemiach
         + dodano opis i znak handlarza do interfejsu gracza (nie oprogramowano jeszcze handlu)
-        + naprawiono błąd przy użyciu przycisku wyjścia z gry '''
+        + naprawiono błąd przy użyciu przycisku wyjścia z gry
 
 # (Alpha v0.010):
         + refaktoryzacja kodu
@@ -135,10 +134,8 @@ nowej gry przez gracza, z poziomu ekranu game over
         + zwiększono czas wyświetlania informacji dla gracza do 1 sekundy (z 0.3s)
 
 # (Alpha v0.02):
-        + dodano obsługę poruszania graczem bez potrzeby zaakceptowania
-akcji przy użyciu klawisza 'enter'
-        + dodano metodę sleep() z biblioteki 'time', by ekran nie czyścił się za szybko
-wymazując instrukcje zwrotna dla gracza
+        + dodano obsługę poruszania graczem bez potrzeby zaakceptowania akcji przy użyciu klawisza 'enter'
+        + dodano metodę sleep() z biblioteki 'time', by ekran nie czyścił się za szybko wymazując instrukcje zwrotna dla gracza
 
 # (Alpha v0.01):
         + pierwsza grywalna wersja

@@ -72,7 +72,7 @@ namespace ftp
                 request.Credentials = new NetworkCredential(User, Pass);
                 request.KeepAlive = false;
                 request.UseBinary = true;
-                request.UsePassive = true;
+                request.UsePassive = false;
 
 
                 FtpWebResponse response = (FtpWebResponse)request.GetResponse();

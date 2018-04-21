@@ -2,8 +2,7 @@
 import random
 import podziemia
 
-stuff = ['miecz', 'zbroja', 'potion', 'buty', 'kusza', 'tiara', 'pierścien', 'amulet', 'tarcza', 'pas', 'rękawice',
-         'pet']
+stuff = ['miecz', 'zbroja', 'potion', 'buty', 'kusza', 'tiara', 'pierścien', 'amulet', 'tarcza', 'pas', 'rękawice', 'pet']
 dobry_prefix = ['dobre', 'magiczne', 'rzadkie', 'legendarne']
 zly_prefix = ['zwykłe', 'zepsute', 'zardzewiałe', 'przeklęte']
 
@@ -45,5 +44,4 @@ class Smiec:
             y.wartosc = (y.wartosc * 0.5) * podziemia.poziom_p
         elif p == 'przeklęte':
             y.wartosc = (y.wartosc * 0.25) * podziemia.poziom_p
-        
         return y

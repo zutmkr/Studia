@@ -13,7 +13,7 @@ from rysuj_obrazy import *
 
 PIK = "save/objects.bj"
 
-os.system('mode con: cols=115 lines=50')
+os.system('mode con: cols=115 lines=55')
 
 
 def menu_glowne():

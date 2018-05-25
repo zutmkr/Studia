@@ -27,7 +27,7 @@ public class Handlowiec extends Pracownik{
         System.out.println("Imie            : " + getImie());
         System.out.println("Nazwisko        : " + getNazwisko());
         System.out.println("Pesel           : " + getPesel());
-        System.out.println("Wynagrodzenie   : " + getWynagrodzenie() + "PLN");
+        System.out.println("Wynagrodzenie   : " + getWynagrodzenie() + " PLN");
         System.out.println("Stanowisko      : " + getStanowisko());
         System.out.println("Telefon         : " + getTelefon());
         System.out.println("Stawka prowizji : " + getStawkaProwizji());
@@ -57,9 +57,11 @@ public class Handlowiec extends Pracownik{
         intInput = Integer.parseInt(scanner.nextLine());
         this.setWynagrodzenie(intInput);
 
+        /*
         System.out.println("Podaj Stanowisko: ");
         input = scanner.nextLine();
         this.setStanowisko(input);
+        */
 
         System.out.println("Podaj Telefon: ");
         input = scanner.nextLine();

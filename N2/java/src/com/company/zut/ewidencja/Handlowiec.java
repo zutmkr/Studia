@@ -1,9 +1,10 @@
 package com.company.zut.ewidencja;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
-public class Handlowiec extends Pracownik{
+public class Handlowiec extends Pracownik implements Serializable {
 
     private BigDecimal stawkaProwizji;
 

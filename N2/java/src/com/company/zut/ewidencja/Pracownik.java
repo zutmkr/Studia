@@ -1,6 +1,8 @@
 package com.company.zut.ewidencja;
+import java.io.Serializable;
 
-public abstract class Pracownik {
+public abstract class Pracownik implements Serializable {
+    private static final long serialVersionUID = 3798185773189585963L;
     private String imie;
     private String nazwisko;
     private String pesel;

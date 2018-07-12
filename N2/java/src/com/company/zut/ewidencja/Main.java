@@ -1,15 +1,21 @@
 package com.company.zut.ewidencja;
 
+import Server.ServerThread;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
 import java.math.BigDecimal;
+import java.net.Socket;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Scanner;
-import java.util.TimeZone;
 
-import com.company.zut.ewidencja.Dyrektor;
-import com.company.zut.ewidencja.Handlowiec;
-import com.company.zut.ewidencja.Pracownik;
+
+
+
 
 public class Main {
 
@@ -20,15 +26,21 @@ public class Main {
 
 
 
+
     public static void main(String[] args) {
 
         Connection connection = null;
+
+        ServerThread server = new ServerThread(1111);
+        server.setDaemon(true);
+        server.start();
 
         try {
             connection = DriverManager.getConnection(DB_URL,USER,PASSWORD);
             connection.setAutoCommit(false);
 
             printMenu(connection);
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -240,7 +252,7 @@ public class Main {
             System.out.println("1. Lista pracownikow");
             System.out.println("2. Dodaj pracownika");
             System.out.println("3. Usun pracownika");
-            //System.out.println("4. Kopia zapasowa");
+            System.out.println("4. Pobierz dane z sieci");
             System.out.println("5. Wyjdz z programu");
 
             selectMenuEntry = input.next().charAt(0);
@@ -255,7 +267,7 @@ public class Main {
                     Delete(conn);
                     break;
                 case '4':
-                    //todo
+                    DownloadData(conn);
                     break;
                 case '5':
                     System.out.println("Program konczy dzialanie");
@@ -266,5 +278,73 @@ public class Main {
             }
            // clearScreen();
         }
+
+    }
+
+    public static void DownloadData(Connection conn)  {
+
+        String addr="";
+        int port = 0;
+
+        String message = "get_all";
+
+        System.out.println("Podaj adres:");
+        Scanner line = new Scanner(System.in);
+        String input = line.nextLine();
+        if(!input.isEmpty())
+            addr = new String(input);
+        input = "";
+
+        System.out.println("Podaj port:");
+        Scanner line2 = new Scanner(System.in);
+        input = line2.nextLine();
+        if(!input.isEmpty())
+            port = Integer.valueOf(input);
+        input = "";
+
+        System.out.println("Adres\t:\t" + addr);
+        System.out.println("Port\t:\t" + port);
+        System.out.println("-----------------------");
+        System.out.print("Zakonczenie\t:\t");
+
+        Socket s;
+        try {
+            s = new Socket(addr, port);
+            if(s.isConnected()) {
+                System.out.println("Sukces");
+            }
+            DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+            dos.writeUTF(message);
+
+            DataInputStream dis = new DataInputStream(s.getInputStream());
+
+            ObjectInputStream ois = new ObjectInputStream(dis);
+
+            //System.out.println("is object avalitable: " + ois.available());
+
+
+            ArrayList<Pracownik> pracownicy =  (ArrayList<Pracownik>) ois.readObject();
+
+            Iterator it = pracownicy.iterator();
+            String op;
+            int index = 0;
+            while(it.hasNext()){
+
+                pracownicy.get(index++).showInfo();
+                System.out.println("[Enter]\tDalej");
+                System.out.println("[Q]\tWyjscie");
+
+                op = line.nextLine();
+                if(op.equals("")) it.next();
+                if(op.equals("Q") || op.equals("q")) return;
+            }
+
+            dos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
     }
 }
